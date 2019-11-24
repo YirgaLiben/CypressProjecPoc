@@ -1,0 +1,11 @@
+{
+  "specName": "SampleAPI.spec.js",
+  "title": "get request",
+  "suiteName": " API test",
+  "testName": " API test get request",
+  "testError": "cy.request() failed on:\n\nhttp://fodqa11-iis3/api/v3/tenants\n\nThe response we received from your web server was:\n\n  > 401: Unauthorized\n\nThis was considered a failure because the status code was not '2xx' or '3xx'.\n\nIf you do not want status codes to cause failures pass the option: 'failOnStatusCode: false'\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: http://fodqa11-iis3/api/v3/tenants\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"Authorization\": \"Bearer null\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\"\n}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 401 - Unauthorized\nHeaders: {\n  \"cache-control\": \"no-cache\",\n  \"pragma\": \"no-cache\",\n  \"content-length\": \"82\",\n  \"content-type\": \"application/json; charset=utf-8\",\n  \"expires\": \"-1\",\n  \"server\": \"Microsoft-IIS/8.5\",\n  \"x-powered-by\": \"ASP.NET\",\n  \"x-ua-compatible\": \"IE=Edge\",\n  \"date\": \"Mon, 28 Oct 2019 17:09:17 GMT\"\n}\nBody: {\n  \"responseCode\": \"401\",\n  \"errorCode\": \"1000\",\n  \"message\": \"authorization failure\"\n}\n",
+  "testCommands": [
+    "request "
+  ],
+  "screenshot": "get-request-failed.png"
+}

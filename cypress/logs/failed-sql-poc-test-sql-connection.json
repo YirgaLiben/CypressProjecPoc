@@ -1,0 +1,11 @@
+{
+  "specName": "FodsqlPoc.spec.js",
+  "title": "test sql connection",
+  "suiteName": "sql poc",
+  "testName": "sql poc test sql connection",
+  "testError": "cy.task('sqlServer:execute') failed with the following error:\n\n> RequestError: Invalid column name 'AUTO-TENANT1-1572627724211'.\n    at RequestError (C:\\FoD\\node_modules\\tedious\\lib\\errors.js:32:12)\n    at Parser.<anonymous> (C:\\FoD\\node_modules\\tedious\\lib\\connection.js:639:32)\n    at Parser.emit (events.js:194:13)\n    at Parser.<anonymous> (C:\\FoD\\node_modules\\tedious\\lib\\token\\token-stream-parser.js:27:14)\n    at Parser.emit (events.js:194:13)\n    at addChunk (C:\\FoD\\node_modules\\tedious\\node_modules\\readable-stream\\lib\\_stream_readable.js:297:12)\n    at readableAddChunk (C:\\FoD\\node_modules\\tedious\\node_modules\\readable-stream\\lib\\_stream_readable.js:279:11)\n    at Parser.Readable.push (C:\\FoD\\node_modules\\tedious\\node_modules\\readable-stream\\lib\\_stream_readable.js:240:10)\n    at Parser.Transform.push (C:\\FoD\\node_modules\\tedious\\node_modules\\readable-stream\\lib\\_stream_transform.js:139:32)\n    at doneParsing (C:\\FoD\\node_modules\\tedious\\lib\\token\\stream-parser.js:80:14)\n    at C:\\FoD\\node_modules\\tedious\\lib\\token\\infoerror-token-parser.js:48:5\n    at C:\\FoD\\node_modules\\tedious\\lib\\token\\infoerror-token-parser.js:13:19\n    at C:\\FoD\\node_modules\\tedious\\lib\\token\\stream-parser.js:185:7\n    at Parser.awaitData (C:\\FoD\\node_modules\\tedious\\lib\\token\\stream-parser.js:109:7)\n    at Parser.readUInt32LE (C:\\FoD\\node_modules\\tedious\\lib\\token\\stream-parser.js:182:10)\n    at C:\\FoD\\node_modules\\tedious\\lib\\token\\infoerror-token-parser.js:12:90",
+  "testCommands": [
+    "task sqlServer:execute, select TenantId  from [ZEUS].[dbo].[TenantMaster] where TenantName = \"AUTO-TENANT1-1572627724211\""
+  ],
+  "screenshot": "test-sql-connection-failed.png"
+}

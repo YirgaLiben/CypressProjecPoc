@@ -1,0 +1,24 @@
+{
+  "specName": "deleteScanTest.spec.js",
+  "title": "delete tenants scan $(tenants)",
+  "suiteName": "Delete Tenant Scan Test",
+  "testName": "Delete Tenant Scan Test delete tenants scan $(tenants)",
+  "testError": "Timed out retrying: Expected to find element: '[data-repository-type=\"2\"] > .action-cell > [data-action=\"delete\"]', but never found it.",
+  "testCommands": [
+    "visit http://fodqa11-iis1/Login",
+    "xhr  POST http://fodqa11-iis1/Tours/GetIncompleteTours",
+    "get #loginEmail",
+    "type zeusadmin1",
+    "get #loginPassword",
+    "type Spi!pass007^",
+    "get #btnAdminLogin",
+    "click ",
+    "xhr  POST http://fodqa11-iis1/Account/RequireSingleUserSessionConfirmation",
+    "wait 1000",
+    "xhr  POST http://fodqa11-iis1/Account/Login",
+    "visit http://fodqa11-iis1/Tenants/1084/Repositories",
+    "xhr  POST http://fodqa11-iis1/Tours/GetIncompleteTours",
+    "get [data-repository-type=\"2\"] > .action-cell > [data-action=\"delete\"]"
+  ],
+  "screenshot": "delete-tenants-scan-tenants-failed.png"
+}

@@ -1,0 +1,9 @@
+{
+  "specName": "FodAppSummaryAndAttributesTest.spec.js",
+  "title": "App Summary test",
+  "suiteName": "App Summary and Attributes Test",
+  "testName": "App Summary and Attributes Test App Summary test",
+  "testError": "Cannot read property 'tenantId' of undefined",
+  "testCommands": [],
+  "screenshot": "app-summary-test-failed.png"
+}

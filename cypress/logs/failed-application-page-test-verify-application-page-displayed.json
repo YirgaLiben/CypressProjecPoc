@@ -1,0 +1,9 @@
+{
+  "specName": "ApplicationsPageTest.spec.js",
+  "title": "Verify application page displayed",
+  "suiteName": "Application page test",
+  "testName": "Application page test Verify application page displayed",
+  "testError": "isRequired is not defined",
+  "testCommands": [],
+  "screenshot": "verify-application-page-displayed-failed.png"
+}

@@ -1,0 +1,11 @@
+{
+  "specName": "TestString.spec.js",
+  "title": "num 3 - test the thing conditionally",
+  "suiteName": "test123",
+  "testName": "test123 num 3 - test the thing conditionally",
+  "testError": "cy.reload() can only accept a boolean or options as its arguments.",
+  "testCommands": [
+    "reload 2"
+  ],
+  "screenshot": "num-3-test-the-thing-conditionally-failed.png"
+}

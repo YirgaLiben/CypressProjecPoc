@@ -1,0 +1,9 @@
+{
+  "specName": "AdminTenantsPageTest.spec.js",
+  "title": "verify admin tenants page displayed",
+  "suiteName": "Admin Tenants Page Test",
+  "testName": "Admin Tenants Page Test verify admin tenants page displayed",
+  "testError": "tenantId is not defined",
+  "testCommands": [],
+  "screenshot": "verify-admin-tenants-page-displayed-failed.png"
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0" tests="1" failures="1">
+  <testsuite name="Root Suite" timestamp="2019-08-29T16:59:00" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Verify tenant login page - " timestamp="2019-08-29T16:59:00" tests="1" failures="1" time="0">
+    <testcase name="Verify tenant login page -  Verify tenant page displayed and check all the elements displayed  " time="0" classname="Verify tenant page displayed and check all the elements displayed  ">
+      <failure message="Timed out retrying: expected &apos;&lt;h1&gt;&apos; to contain &apos;Fortify1&apos;" type="CypressError"><![CDATA[CypressError: Timed out retrying: expected '<h1>' to contain 'Fortify1'
+    at Object.cypressErr (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:85348:11)
+    at Object.throwErr (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:85303:18)
+    at Object.throwErrByPath (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:85335:17)
+    at retry (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:77321:16)
+    at onFailFn (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:68422:16)
+    at tryCatcher (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:118962:23)
+    at Promise._settlePromiseFromHandler (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:116898:31)
+    at Promise._settlePromise (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:116955:18)
+    at Promise._settlePromise0 (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:117000:10)
+    at Promise._settlePromises (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:117075:18)
+    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:113687:16)
+    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:113697:10)
+    at Async.drainQueues (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:113571:14)
+    at <anonymous>]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,9 @@
+{
+  "specName": "FodAppSummaryAndAttributesTest.spec.js",
+  "title": "Create an app  and verify application attributes page",
+  "suiteName": "App Summary and Attributes Test",
+  "testName": "App Summary and Attributes Test Create an app  and verify application attributes page",
+  "testError": "[object Array] is not a function",
+  "testCommands": [],
+  "screenshot": "create-an-app-and-verify-application-attributes-page-failed.png"
+}

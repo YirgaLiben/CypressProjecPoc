@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-11-05T14:08:59.704Z",
+    "end": "2019-11-05T14:09:04.505Z",
+    "duration": 4801,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "17450739-4e25-4280-ab81-41648dbdc912",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "819a66d0-5925-445f-891e-967cc2433c59",
+          "title": "Verify tenant login page - ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify tenant page displayed and check all the elements displayed  ",
+              "fullTitle": "Verify tenant login page -  Verify tenant page displayed and check all the elements displayed  ",
+              "timedOut": null,
+              "duration": 2729,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env(\"tenantSite\"));\ncy.get('.plus_art > object').should('exist');\ncy.get('#mf-logo').should('exist');\ncy.get('.btn-link').should('exist').and('contain', 'Fortify Security Products');\ncy.get('#nav-collapse > .btn-primary').should('have.attr', 'href').and('include', 'https://software.microfocus.com/en-us/software/fortify-on-demand');\ncy.get('h1').should('contain', \"Fortify\");\ncy.get('h2').should('contain', 'on Demand');\ncy.get('#loginEmail').should('have.attr', 'placeholder', 'Username');\ncy.get('#loginPassword').should('have.attr', 'placeholder', 'Password');\ncy.get('#loginTenantID').should('have.attr', 'placeholder', 'Tenant');\ncy.get('.forgot-password > a').should('exist').and('contain', 'Forgot Your Password?');\ncy.get('.mf-logo > object').should('exist');\ncy.get('#btnLogin').should('exist').and('be.enabled');\ncy.get('#btnLogin').click();\ncy.get('#login-error > ul > li').should('exist').and('contain', 'Username is required.');\ncy.get('#loginEmail').type('fake');\ncy.get('#btnLogin').click();\ncy.get('#login-error > ul > li').should('exist').and('contain', 'Password is required.');\ncy.get('.catch_phrase').should('exist').and('contain', 'Find Fix');\ncy.xpath('//a[text()=\"Fortify\"]').should('have.attr', 'href', 'https://software.microfocus.com/en-us/software/fortify-on-demand'); // Cypress.currentTest.retries(2)",
+              "err": {},
+              "uuid": "9af44dbb-fc4e-4de8-8462-67a25c5acfdc",
+              "parentUUID": "819a66d0-5925-445f-891e-967cc2433c59",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9af44dbb-fc4e-4de8-8462-67a25c5acfdc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2729,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.0.1"
+    }
+  }
+}

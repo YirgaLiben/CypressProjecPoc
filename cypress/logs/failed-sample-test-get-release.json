@@ -1,0 +1,11 @@
+{
+  "specName": "getapi.spec.js",
+  "title": "get release",
+  "suiteName": "sample test",
+  "testName": "sample test get release",
+  "testError": "cy.request() must be provided a fully qualified url - one that begins with 'http'. By default cy.request() will use either the current window's origin or the 'baseUrl' in cypress.json. Neither of those values were present.",
+  "testCommands": [
+    "request Object{3}"
+  ],
+  "screenshot": "get-release-failed.png"
+}

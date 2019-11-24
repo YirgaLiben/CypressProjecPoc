@@ -1,0 +1,43 @@
+{
+  "name": "fod",
+  "version": "1.0.0",
+  "description": "fod cypress",
+  "main": "index.js",
+  "scripts": {
+    "delete:reports": "rm cypress/results/* || true",
+    "prereport": "npm run delete:reports",
+    "report": "cypress run",
+    "combine-reports": "mochawesome-merge --reportDir cypress/reports/mocha > cypress/reports/mochareports/report.json",
+    "generate-report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareports"
+  },
+  "devDependencies": {
+    "@4tw/cypress-drag-drop": "^1.3.0",
+    "cypress": "3.5.0",
+    "cypress-capybara": "0.0.2",
+    "cypress-dark": "^1.7.14",
+    "cypress-failed-log": "^2.5.1",
+    "cypress-file-upload": "^3.3.3",
+    "cypress-plugin-retries": "^1.3.0",
+    "cypress-sql-server": "*",
+    "cypress-wait-until": "^1.4.1",
+    "cypress-xpath": "^1.4.0",
+    "ejs": "^2.5.7",
+    "express": "4.17.1",
+    "mocha": "^5.2.0",
+    "mocha-junit-reporter": "^1.23.1",
+    "mocha-multi-reporters": "^1.1.7",
+    "mochawesome": "^4.1.0",
+    "mochawesome-merge": "^2.0.1",
+    "mochawesome-report-generator": "^4.0.1",
+    "mssql": "5.1.0",
+    "rimraf": "^2.6.3"
+  },
+  "author": "Yirga",
+  "license": "ISC",
+  "dependencies": {
+    "@applitools/eyes-cypress": "^3.8.18",
+    "cypress-downloadfile": "^1.0.1",
+    "mssql": "^5.1.0",
+    "mysql": "^2.17.1"
+  }
+}

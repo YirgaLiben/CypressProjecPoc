@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-09-18T19:02:37.524Z",
+    "end": "2019-09-18T19:03:18.131Z",
+    "duration": 40607,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8f578ab5-d6fd-4dd9-85e5-7836e0bc53a8",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "dc13eabe-6533-4a79-9f06-b9dc1e1678eb",
+          "title": "Delete Tenant Scan Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "delete tenants scan $(tenants)",
+              "fullTitle": "Delete Tenant Scan Test delete tenants scan $(tenants)",
+              "timedOut": null,
+              "duration": 8112,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var url = \"http://fodqa11-iis1/Tenants/\" + tenant + \"/Repositories\";\ncy.visit(url); // cy.get(\"[data-tenant-id=\"+tenant+\"] > :nth-child(1) > a\").click();\n// cy.get(':nth-child(8) > .nav-tab > :nth-child(1) > .nav-tab-icon > .ff').click();\nvar dt = new Date();\nvar dateTime = dt.toLocaleString();\ncy.get('[data-repository-type=\"2\"] > .action-cell > [data-action=\"delete\"]').click();\ncy.get('.box-glow > .modal-custom-content').should('exist');\ncy.get('.btn-critical').click();\ncy.get('.modal-custom-header > span').should('exist').and('contain', 'Confirm');\ncy.get('.modal-message').should('contain', 'Are you REALLY SURE you want to delete the selected repository for this tenant?');\ncy.get('.btn-critical').click({\n  force: true\n});\ncy.wait(1000);\ncy.get('[data-repository-type=\"2\"] > .action-cell > [data-action=\"delete\"]').click();\ncy.get('.box-glow > .modal-custom-content').should('exist');\ncy.get('.btn-critical').click();\ncy.get('.modal-custom-header > span').should('exist').and('contain', 'Confirm');\ncy.get('.modal-message').should('contain', 'Are you REALLY SURE you want to delete the selected repository for this tenant?');\ncy.get('.btn-critical').click({\n  force: true\n});\nvar deletedTime = dateTime; //Rebuild Scan\ncy.wait(2000);\ncy.get('[data-repository-type=\"2\"] > .action-cell > [data-action=\"rebuild\"]').click();\ncy.get('.modal-message').should('contain', 'Are you sure you want to queue the rebuild task the selected repository for this tenant?');\ncy.get('.btn-critical').click({\n  force: true\n}); //cy.wait(30000)\ncy.visit(\"http://fodqa11-iis1/TaskService/Tasks?tenant=\" + tenant + \"&tt=13&ts=0+3\");\ncy.log(\"TenantID:  \" + tenant);\nvar tasksFound = Cypress.$('.paging-section-total > span').text();\nvar found = false;\nvar count = 0;\nwhile (!found) {\n  if (tasksFound !== \"0 found\") {\n    cy.reload();\n    found = false;\n    count = count + 1;\n    cy.wait(1000);\n    if (count == 35) {\n      found = true;\n      cy.log(\"The page still displaying more task after 35 seconds please verify tenant Id:  \" + tenant);\n    }\n  } else {\n    found = true;\n  }\n}\ncy.get('.paging-section-total > span').should('contain', '0 found');\ncy.get('.empty-table').should('exist');\nvar results = \"[\" + deletedTime + \"]:\" + \"Tenant [\" + tenant + \"] scan repo deleted and [\" + dateTime + \"]:\" + \"Tenant [\" + tenant + \"] scan repo rebuilt\\n\";\ncy.writeFile(\"./results/tenantScanDeleteRebuild.txt\", results, {\n  flag: 'a+'\n});",
+              "err": {},
+              "uuid": "a203810f-6a68-4c78-92e8-e4ae7bf07dcf",
+              "parentUUID": "dc13eabe-6533-4a79-9f06-b9dc1e1678eb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "delete tenants scan $(tenants)",
+              "fullTitle": "Delete Tenant Scan Test delete tenants scan $(tenants)",
+              "timedOut": null,
+              "duration": 6643,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var url = \"http://fodqa11-iis1/Tenants/\" + tenant + \"/Repositories\";\ncy.visit(url); // cy.get(\"[data-tenant-id=\"+tenant+\"] > :nth-child(1) > a\").click();\n// cy.get(':nth-child(8) > .nav-tab > :nth-child(1) > .nav-tab-icon > .ff').click();\nvar dt = new Date();\nvar dateTime = dt.toLocaleString();\ncy.get('[data-repository-type=\"2\"] > .action-cell > [data-action=\"delete\"]').click();\ncy.get('.box-glow > .modal-custom-content').should('exist');\ncy.get('.btn-critical').click();\ncy.get('.modal-custom-header > span').should('exist').and('contain', 'Confirm');\ncy.get('.modal-message').should('contain', 'Are you REALLY SURE you want to delete the selected repository for this tenant?');\ncy.get('.btn-critical').click({\n  force: true\n});\ncy.wait(1000);\ncy.get('[data-repository-type=\"2\"] > .action-cell > [data-action=\"delete\"]').click();\ncy.get('.box-glow > .modal-custom-content').should('exist');\ncy.get('.btn-critical').click();\ncy.get('.modal-custom-header > span').should('exist').and('contain', 'Confirm');\ncy.get('.modal-message').should('contain', 'Are you REALLY SURE you want to delete the selected repository for this tenant?');\ncy.get('.btn-critical').click({\n  force: true\n});\nvar deletedTime = dateTime; //Rebuild Scan\ncy.wait(2000);\ncy.get('[data-repository-type=\"2\"] > .action-cell > [data-action=\"rebuild\"]').click();\ncy.get('.modal-message').should('contain', 'Are you sure you want to queue the rebuild task the selected repository for this tenant?');\ncy.get('.btn-critical').click({\n  force: true\n}); //cy.wait(30000)\ncy.visit(\"http://fodqa11-iis1/TaskService/Tasks?tenant=\" + tenant + \"&tt=13&ts=0+3\");\ncy.log(\"TenantID:  \" + tenant);\nvar tasksFound = Cypress.$('.paging-section-total > span').text();\nvar found = false;\nvar count = 0;\nwhile (!found) {\n  if (tasksFound !== \"0 found\") {\n    cy.reload();\n    found = false;\n    count = count + 1;\n    cy.wait(1000);\n    if (count == 35) {\n      found = true;\n      cy.log(\"The page still displaying more task after 35 seconds please verify tenant Id:  \" + tenant);\n    }\n  } else {\n    found = true;\n  }\n}\ncy.get('.paging-section-total > span').should('contain', '0 found');\ncy.get('.empty-table').should('exist');\nvar results = \"[\" + deletedTime + \"]:\" + \"Tenant [\" + tenant + \"] scan repo deleted and [\" + dateTime + \"]:\" + \"Tenant [\" + tenant + \"] scan repo rebuilt\\n\";\ncy.writeFile(\"./results/tenantScanDeleteRebuild.txt\", results, {\n  flag: 'a+'\n});",
+              "err": {},
+              "uuid": "455c77da-b6b2-4275-8607-d86591a3bd0d",
+              "parentUUID": "dc13eabe-6533-4a79-9f06-b9dc1e1678eb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a203810f-6a68-4c78-92e8-e4ae7bf07dcf",
+            "455c77da-b6b2-4275-8607-d86591a3bd0d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 14755,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.0.1"
+    }
+  }
+}

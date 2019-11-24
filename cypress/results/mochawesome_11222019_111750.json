@@ -1,0 +1,152 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 1,
+    "pending": 0,
+    "failures": 2,
+    "start": "2019-11-22T16:15:20.243Z",
+    "end": "2019-11-22T16:17:50.446Z",
+    "duration": 150203,
+    "testsRegistered": 3,
+    "passPercent": 33.33333333333333,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "954cfe96-66a8-4dd5-b437-5911830144db",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "339e43d2-fee4-4a21-91b6-2b57098c9fcb",
+          "title": "App Summary and Attributes Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Creat a tenants",
+              "fullTitle": "App Summary and Attributes Test Creat a tenants",
+              "timedOut": null,
+              "duration": 33961,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/FoD\\\\FodAppSummaryAndAttributesTest.spec.js/App Summary and Attributes Test--Creat a tenants(failed).png\"",
+              "code": "loginPage.loginToAdminSite(\"zeusadmin\", \"Spi!pass007^\");\ntenantsPage.navigateToTenantsPage();\ntenantsPage.createTenant(tenantId);",
+              "err": {
+                "message": "CypressError: Timed out retrying: Expected to find element: '#TenantModel_PrimaryCustomerContactEmail', but never found it.",
+                "estack": "CypressError: Timed out retrying: Expected to find element: '#TenantModel_PrimaryCustomerContactEmail', but never found it.\n    at Object.cypressErr (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:104836:11)\n    at Object.throwErr (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:104791:18)\n    at Object.throwErrByPath (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:104823:17)\n    at retry (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:96197:16)\n    at onFailFn (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:85350:16)\n    at tryCatcher (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:138875:23)\n    at Promise._settlePromiseFromHandler (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:136811:31)\n    at Promise._settlePromise (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:136868:18)\n    at Promise._settlePromise0 (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:136913:10)\n    at Promise._settlePromises (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:136988:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:133600:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:133610:10)\n    at Async.drainQueues (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:133484:14)",
+                "diff": null
+              },
+              "uuid": "703b7f5c-d877-4046-a699-5998952fe89e",
+              "parentUUID": "339e43d2-fee4-4a21-91b6-2b57098c9fcb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create an application and verify tenants  App summary page",
+              "fullTitle": "App Summary and Attributes Test Create an application and verify tenants  App summary page",
+              "timedOut": null,
+              "duration": 30043,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.loginToTenantSite('AUTO-TAM', 'Spi!pass007^', 'tenantId');\napplicationPage.createApplication(appName, 'High', 'Web / Thick-Client', 'Production');\napplicationPage.selectCreatedApplication(appName);\nsettingsPage.clickSettingTab();\nsettingsPage.verifyApplicationSummaryPageDisplayed();\nsettingsPage.verifyApplicationSummaryTabDisplayed();\nsettingsPage.verifyApplicationSaveValidation();\nsettingsPage.verifyApplicationNameDisplayed(\"\".concat(appName));\nsettingsPage.verifyBusinessCriticalitySelected('High');\nsettingsPage.verifyApplicationTypeDisplayed('Web / Thick-Client');\nsettingsPage.verifyApplicationDescriptionDisplayed('The most epic App ever');\nsettingsPage.verifyEmailValidation();\nsettingsPage.enterAndVerifyAdditionalEmails('Yahoo@gmail.com;test@test.com');\nsettingsPage.verifyAppDeletionPopUp();\nsettingsPage.updateApplicationSummaryAndVerifyUpdateSaved();\nsettingsPage.verifyApplicationDeleted(appName);\nCypress.currentTest.retries(1);",
+              "err": {},
+              "uuid": "e6a6cf61-ba86-4d3b-87ff-4774b73ae11f",
+              "parentUUID": "339e43d2-fee4-4a21-91b6-2b57098c9fcb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create an app  and verify application attributes page",
+              "fullTitle": "App Summary and Attributes Test Create an app  and verify application attributes page",
+              "timedOut": null,
+              "duration": 74636,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/FoD\\\\FodAppSummaryAndAttributesTest.spec.js/App Summary and Attributes Test--Create an app  and verify application attributes page(failed).png\"",
+              "code": "loginPage.loginToTenantSite('AUTO-TAM', 'Spi!pass007^', 'tenantId');\napplicationPage.createApplication(appName, 'High', 'Web / Thick-Client', 'Production');\nattributesPage.navigateToSettingsAttributesPage();\nattributesPage.addAttributes('CustomAttribute1', 'Text', 'isRequired');\nattributesPage.addAttributes('CustomPicklist', 'Picklist', 'notRequired');\nattributesPage.addAttributes('CustomAttribute3', 'Boolean', 'isRequired');\nattributesPage.addAttributes('CustomAttributeDate', 'Date', 'notRequired');\nattributesPage.addAttributes('CustomAttributeUser', 'User', 'Required');\napplicationPage.navigateToApplicationsPage();\napplicationPage.searchForCreatedApplication(appName);\nsettingsPage.clickSettingTab();\nsettingsPage.clickApplicationAttributesTab();\nsettingsPage.verifyAddedAttributesDisplayInAppAttributesPage();\nsettingsPage.verifyApplicationAttributesSaveValidation();\nsettingsPage.createApplicationAndVerifyAttributes();",
+              "err": {
+                "message": "CypressError: Timed out retrying: Expected to find element: 'a[title=\"appName1574439391802\"]', but never found it.",
+                "estack": "CypressError: Timed out retrying: Expected to find element: 'a[title=\"appName1574439391802\"]', but never found it.\n    at Object.cypressErr (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:104836:11)\n    at Object.throwErr (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:104791:18)\n    at Object.throwErrByPath (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:104823:17)\n    at retry (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:96197:16)\n    at onFailFn (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:85350:16)\n    at tryCatcher (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:138875:23)\n    at Promise._settlePromiseFromHandler (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:136811:31)\n    at Promise._settlePromise (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:136868:18)\n    at Promise._settlePromise0 (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:136913:10)\n    at Promise._settlePromises (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:136988:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:133600:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:133610:10)\n    at Async.drainQueues (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:133484:14)",
+                "diff": null
+              },
+              "uuid": "03829315-59bf-40f9-89f9-99855c67cbf4",
+              "parentUUID": "339e43d2-fee4-4a21-91b6-2b57098c9fcb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e6a6cf61-ba86-4d3b-87ff-4774b73ae11f"
+          ],
+          "failures": [
+            "703b7f5c-d877-4046-a699-5998952fe89e",
+            "03829315-59bf-40f9-89f9-99855c67cbf4"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 138640,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.0.1"
+    }
+  }
+}

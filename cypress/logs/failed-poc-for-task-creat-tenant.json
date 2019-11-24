@@ -1,0 +1,9 @@
+{
+  "specName": "FoDPoc.spec.js",
+  "title": "Creat tenant",
+  "suiteName": "POC for Task",
+  "testName": "POC for Task Creat tenant",
+  "testError": "cy.CreateTenants is not a function",
+  "testCommands": [],
+  "screenshot": "creat-tenant-failed.png"
+}

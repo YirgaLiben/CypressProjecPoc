@@ -1,0 +1,90 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2019-09-18T18:36:28.049Z",
+    "end": "2019-09-18T18:36:28.233Z",
+    "duration": 184,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "56ddf606-5d6c-45c5-b15b-bc125a3fbff7",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "An uncaught error was detected outside of a test",
+          "fullTitle": " An uncaught error was detected outside of a test",
+          "timedOut": null,
+          "duration": 173,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": "\"assets/FoD\\\\deleteScanTest.spec.js/ -- An uncaught error was detected outside of a test (failed).png\"",
+          "code": "throw err;",
+          "err": {
+            "message": "Uncaught Error: Your OS \"browser\" is currently not supported by node-cachedir.\n\nThis error originated from your test code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.",
+            "estack": "Uncaught Error: Your OS \"browser\" is currently not supported by node-cachedir.\n\nThis error originated from your test code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.\n    at http://localhost:61115/__cypress/tests?p=cypress\\support\\index.js-322:20401:20\n    at Object.<anonymous> (http://localhost:61115/__cypress/tests?p=cypress\\support\\index.js-322:20403:2)\n    at Object.72._process (http://localhost:61115/__cypress/tests?p=cypress\\support\\index.js-322:20419:4)\n    at o (http://localhost:61115/__cypress/tests?p=cypress\\support\\index.js-322:1:265)\n    at http://localhost:61115/__cypress/tests?p=cypress\\support\\index.js-322:1:316\n    at Object.<anonymous> (http://localhost:61115/__cypress/tests?p=cypress\\support\\index.js-322:28363:16)\n    at Object.162../fs (http://localhost:61115/__cypress/tests?p=cypress\\support\\index.js-322:28722:4)\n    at o (http://localhost:61115/__cypress/tests?p=cypress\\support\\index.js-322:1:265)\n    at http://localhost:61115/__cypress/tests?p=cypress\\support\\index.js-322:1:316\n    at Object.<anonymous> (http://localhost:61115/__cypress/tests?p=cypress\\support\\index.js-322:26143:12)\n    at Object.148../lib/cypress (http://localhost:61115/__cypress/tests?p=cypress\\support\\index.js-322:26166:4)\n    at o (http://localhost:61115/__cypress/tests?p=cypress\\support\\index.js-322:1:265)\n    at http://localhost:61115/__cypress/tests?p=cypress\\support\\index.js-322:1:316\n    at Object.<anonymous> (http://localhost:61115/__cypress/tests?p=cypress\\support\\index.js-322:127:15)\n    at Object.2../commands (http://localhost:61115/__cypress/tests?p=cypress\\support\\index.js-322:148:4)\n    at o (http://localhost:61115/__cypress/tests?p=cypress\\support\\index.js-322:1:265)",
+            "diff": null
+          },
+          "uuid": "66479457-0ace-4b79-85c8-bfdd9ad3baa1",
+          "parentUUID": "56ddf606-5d6c-45c5-b15b-bc125a3fbff7",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [
+        "66479457-0ace-4b79-85c8-bfdd9ad3baa1"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 173,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.0.1"
+    }
+  }
+}

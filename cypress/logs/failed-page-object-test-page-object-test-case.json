@@ -1,0 +1,9 @@
+{
+  "specName": "po.spec.js",
+  "title": "page object test case",
+  "suiteName": "page object test",
+  "testName": "page object test page object test case",
+  "testError": "loginPage.loginPageVisible is not a function",
+  "testCommands": [],
+  "screenshot": "page-object-test-case-failed.png"
+}

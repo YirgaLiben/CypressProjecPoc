@@ -1,0 +1,66 @@
+{
+  "chromeWebSecurity": false,
+  "trashAssetsBeforeRuns":false,
+  "env": {
+    "tenant": "AUTO-TAM",
+    "admin": "zeusadmin",
+    "MI_Net_pass": "Spi!pass007^",
+    "tenantSite": {
+      "url": "https://fodqa11-iis2/login",
+      "path": ""
+    },
+    "adminSite": {
+      "url": "http://fodqa11-iis1/Login",
+      "path": ""
+    },
+    "adminSiteqa3": {
+      "url": "http://fodqa3-admin/Login",
+      "path": ""
+    },
+    "db": {
+      "userName": "sa",
+      "password": "SPI!password",
+      "server": "16.103.234.203",
+      "options": {
+          "database": "ZEUS",
+          "encrypt": true,
+          "rowCollectionOnRequestCompletion" : true
+      }
+  
+  },
+  "dbconfig": {
+    "server": "16.103.234.203",
+    "user": "sa",
+    "password": "SPI!pass word",
+    "database": "ZEUS",
+    "port": 1433,
+
+    "options": {
+        "encrypt": false
+    }
+
+  }
+},
+
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "cypress/results",
+    "overwrite": true,
+    "html": true,
+    "json": true,
+    "timestamp": "mmddyyyy_HHMMss"
+  },
+
+  "scripts": {
+    "cy:run": "cypress run",
+    "test": "mocha"
+  },
+  "defaultCommandTimeout": 25000,
+  "pageLoadTimeout": 25000,
+  "responseTimeout": 25000,
+  "video": false,
+  "theme": "dark",
+  "waitForAnimations":true
+
+  
+}

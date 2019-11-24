@@ -1,0 +1,9 @@
+{
+  "specName": "ApplicationsPageTest.spec.js",
+  "title": "log",
+  "suiteName": "Application page test",
+  "testName": "Application page test log",
+  "testError": "titleText is not defined",
+  "testCommands": [],
+  "screenshot": "log-failed.png"
+}
