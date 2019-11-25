@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2019-11-24T22:35:15.151Z",
+    "end": "2019-11-24T22:35:19.058Z",
+    "duration": 3907,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f8245b75-7a3e-4a4d-a625-86943f2ed0cb",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9225265d-0ff3-4fc4-9718-81d238df33a0",
+          "title": "Application page test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify application page displayed",
+              "fullTitle": "Application page test Verify application page displayed",
+              "timedOut": null,
+              "duration": 406,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/FoD\\\\ApplicationsPageTest.spec.js/Application page test--Verify application page displayed(failed).png\"",
+              "code": "cy.visit(Cypress.env(\"tenantSite\"));\nloginPage.loginToTenantSite('AUTO-TAM', 'Spi!pass007^', 'AUTO-TENANT');\napplicationsPage.verifyApplicationsPageDisplayed();\ncy.contains('testFP').click();\ncy.get('div.nav-tabs li>a[data-tabaction=\"SettingsSummary\"]').click({\n  force: true\n});\ncy.get('.SPITabContentGroup > .contextbar > .section').contains('Application Summary').should('exist');\ncy.get('[data-action=\"save\"]').should('exist').and('be.enabled');\ncy.get('[data-action=\"delete-application\"]').should('exist').and('be.enabled').and('contain', 'Delete Application'); //  settingsPage.verifyAppDeletionPopUp()\nattributesPage.clickSettingsAttributes();\nattributesPage.addAttributes('test', 'Picklist', 'isRequired');\nvar titleText;\ncy.get('@tenants').then(function (users) {\n  cy.log(\"there are \".concat(users.tenantId));\n  titleText = normalizeText(\"\".concat(users.tenantId));\n  cy.log(titleText);\n}); // cy.get('.nav-tabs > li').should(($list)=>{\n//     expect($list).to.have.length(5)\n//     expect($list.eq(0)).to.contains('Application Summary')//.and('have.attr', 'href')\n//     expect($list.eq(1)).to.contain('Application Attributes')//.and('have.attr', 'href')\n//     expect($list.eq(2)).to.contain('Bug Tracker')//.and('have.attr', 'href')\n//     expect($list.eq(3)).to.contain('Application Defender')//.and('have.attr', 'href')\n//     expect($list.eq(4)).to.contain('Source Control')//.and('have.attr', 'href')\n// })",
+              "err": {
+                "message": "TypeError: attributesPage.clickSettingsAttributes is not a function",
+                "estack": "TypeError: attributesPage.clickSettingsAttributes is not a function\n    at Context.<anonymous> (http://localhost:55279/__cypress/tests?p=cypress\\integration\\FoD\\ApplicationsPageTest.spec.js-881:40:20)",
+                "diff": null
+              },
+              "uuid": "7515c58c-070b-4eb8-9a0d-b7e429c8204b",
+              "parentUUID": "9225265d-0ff3-4fc4-9718-81d238df33a0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "7515c58c-070b-4eb8-9a0d-b7e429c8204b"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 406,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.0.1"
+    }
+  }
+}

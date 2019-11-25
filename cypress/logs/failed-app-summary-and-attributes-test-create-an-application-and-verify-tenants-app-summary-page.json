@@ -3,9 +3,20 @@
   "title": "Create an application and verify tenants  App summary page",
   "suiteName": "App Summary and Attributes Test",
   "testName": "App Summary and Attributes Test Create an application and verify tenants  App summary page",
-  "testError": "cy.visit() failed trying to load:\n\nhttps://fodqa11-iis2/login\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ETIMEDOUT 16.103.234.206:443\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThe stack trace for this error is:\n\nError: connect ETIMEDOUT 16.103.234.206:443\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1061:14)\n",
+  "testError": "Timed out retrying: Expected to find element: '#SelectedValue', but never found it.",
   "testCommands": [
-    "visit https://fodqa11-iis2/login"
+    "visit https://fodqa11-iis2/login",
+    "get #loginEmail",
+    "type AUTO-TAM",
+    "get #loginPassword",
+    "type Spi!pass007^",
+    "get #loginTenantID",
+    "type tenantid",
+    "get #btnLogin",
+    "click ",
+    "readFile cypress/fixtures/TenantId.json",
+    "get #SelectedValue",
+    "assert expected **{ Object (length, prevObject, ...) }** to be **visible**"
   ],
   "screenshot": "create-an-application-and-verify-tenants-app-summary-page-failed.png"
 }

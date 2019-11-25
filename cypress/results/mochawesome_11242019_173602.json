@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 0,
+    "passes": 0,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-11-24T22:35:57.852Z",
+    "end": "2019-11-24T22:36:02.501Z",
+    "duration": 4649,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "d0ba6983-3321-44c6-b90d-1ea12ecdaf2f",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "50b89317-0186-4206-ba85-6a54891cef47",
+          "title": "Applitools visual validation POC",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Visual test adding a tenants ",
+              "fullTitle": "Applitools visual validation POC Visual test adding a tenants ",
+              "timedOut": null,
+              "duration": 1047,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/FoD\\\\ApplitoolsVisualTest.spec.js/Applitools visual validation POC--Visual test adding a tenants (failed).png\"",
+              "code": "cy.LoginToAdminSite(\"zeusadmin\", \"Spi!pass007^\");\nvar tenantId = 'AUTO-TENANT1-' + Date.now();\ncy.eyesCheckWindow('Admin Page dashboard');\ncy.get('.navbar-nav a').contains('Administration').click();\ncy.get('.dropdown-menu').contains('Tenants').click();\ncy.get('[data-action=\"add-tenant\"]').click();\ncy.eyesCheckWindow('Tenant Details');\ncy.get('#secLeadUserName').type(\"AUTO-SL\" + Date.now());\ncy.get('#secLeadEmail').type(tenantId + '@fod.auto');\ncy.get('#secLeadFirstName').type('AUTO-SL1');\ncy.get('#secLeadLastName').type('AUTO-SL1');\ncy.get('[data-action=\"next\"]').click();\ncy.eyesCheckWindow('Tenant Entitlement info');\ncy.get('#tenantName').type(tenantId);\ncy.get('#tenantCode').type(tenantId);\ncy.get('#addressStreet1').type('5555 Windward Pkwy\"');\ncy.get('#addressCity').type('Alpharetta');\ncy.get('#addressCountry').select('Uganda');\ncy.get('#timeZone').select('(UTC) Coordinated Universal Time');\ncy.get('[data-action=\"next\"]').click();\ncy.eyesCheckWindow('Tenant Details');\ncy.get('#entitlementPaymentType').select('Other');\ncy.get('[data-action=\"next\"]').click();\ncy.get('#industryType').select('Information Technology');\ncy.get('[data-action=\"next\"]').click();\ncy.eyesCheckWindow('Tenants Summary');",
+              "err": {
+                "message": "Error: Request failed with status code 403 (Forbidden)\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: 'Applitools visual validatio...'",
+                "estack": "Error: Request failed with status code 403 (Forbidden)\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: 'Applitools visual validatio...'\n    at http://localhost:55279/__cypress/tests?p=cypress\\support\\index.js-374:1664:17",
+                "diff": null
+              },
+              "uuid": "4355f999-f9fb-423f-89cb-a9c69e62ae84",
+              "parentUUID": "50b89317-0186-4206-ba85-6a54891cef47",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "4355f999-f9fb-423f-89cb-a9c69e62ae84"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1047,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.0.1"
+    }
+  }
+}

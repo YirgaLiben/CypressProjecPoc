@@ -1,0 +1,11 @@
+{
+  "specName": "AdminSiteSettings.spec.js",
+  "title": "pdf test",
+  "suiteName": "Admin Site Settings Page",
+  "testName": "Admin Site Settings Page pdf test",
+  "testError": "Timed out retrying: Expected to find element: '#filesToUpload', but never found it.",
+  "testCommands": [
+    "get #filesToUpload"
+  ],
+  "screenshot": "pdf-test-failed.png"
+}

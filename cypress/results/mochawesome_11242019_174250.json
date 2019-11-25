@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 1,
+    "failures": 0,
+    "start": "2019-11-24T22:42:27.305Z",
+    "end": "2019-11-24T22:42:50.009Z",
+    "duration": 22704,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 50,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0c7ac983-7070-4cba-8a38-2f3eb0d7623d",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "230d83d6-28c6-4963-8b0b-b7fd419a6560",
+          "title": "POC for Task",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Creat tenant",
+              "fullTitle": "POC for Task Creat tenant",
+              "timedOut": null,
+              "duration": 18101,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.LoginToAdminSite(\"zeusadmin\", \"Spi!pass007^\");\ncy.CreateTenants();",
+              "err": {},
+              "uuid": "d6ed5e3c-f1ee-41e6-b926-ae48b5da158a",
+              "parentUUID": "230d83d6-28c6-4963-8b0b-b7fd419a6560",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create application",
+              "fullTitle": "POC for Task Create application",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "1e72982e-f79f-4fe0-ad7c-929e52394f6e",
+              "parentUUID": "230d83d6-28c6-4963-8b0b-b7fd419a6560",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d6ed5e3c-f1ee-41e6-b926-ae48b5da158a"
+          ],
+          "failures": [],
+          "pending": [
+            "1e72982e-f79f-4fe0-ad7c-929e52394f6e"
+          ],
+          "skipped": [],
+          "duration": 18101,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.0.1"
+    }
+  }
+}

@@ -69,6 +69,8 @@ class ApplicationsPage extends BasePage {
     searchForCreatedApplication(appName)
     {
         cy.get('[data-role="searchText"]').type(`${appName}{enter}`)
+        cy.wait(2000)
+        cy.reload()
         cy.contains(`${appName}`).should('exist')
         cy.get(`a[title="${appName}"]`).click()
     }

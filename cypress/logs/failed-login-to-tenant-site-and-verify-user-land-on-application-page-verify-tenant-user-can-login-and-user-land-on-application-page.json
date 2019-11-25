@@ -1,0 +1,20 @@
+{
+  "specName": "loginToTenantSite.spec.js",
+  "title": "verify tenant user can login and user land on application page",
+  "suiteName": "Login to tenant site and verify  user land on application page",
+  "testName": "Login to tenant site and verify  user land on application page verify tenant user can login and user land on application page",
+  "testError": "Timed out retrying: Expected to find element: 'input[type=submit][value=OK]', but never found it.",
+  "testCommands": [
+    "visit https://fodqa11-iis2/login",
+    "get #loginEmail",
+    "type AUTO-TAM",
+    "get #loginPassword",
+    "type Spi!pass007^",
+    "get #loginTenantID",
+    "type tenantid",
+    "get #btnLogin",
+    "click ",
+    "get input[type=submit][value=OK]"
+  ],
+  "screenshot": "verify-tenant-user-can-login-and-user-land-on-application-page-failed.png"
+}

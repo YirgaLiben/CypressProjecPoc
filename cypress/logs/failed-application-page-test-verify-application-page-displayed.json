@@ -3,7 +3,7 @@
   "title": "Verify application page displayed",
   "suiteName": "Application page test",
   "testName": "Application page test Verify application page displayed",
-  "testError": "isRequired is not defined",
+  "testError": "attributesPage.clickSettingsAttributes is not a function",
   "testCommands": [],
   "screenshot": "verify-application-page-displayed-failed.png"
 }

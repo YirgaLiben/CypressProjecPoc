@@ -1,0 +1,11 @@
+{
+  "specName": "FodapiTestPoc.spec.js",
+  "title": "Get Tenants features",
+  "suiteName": "sample test",
+  "testName": "sample test Get Tenants features",
+  "testError": "cy.request() timed out waiting 25000ms for a response from your server.\n\nThe request we sent was:\n\nMethod: GET\nURL: http://fodqa11-iis3/api/v3/tenants/features\n\nNo response was received within the timeout.",
+  "testCommands": [
+    "request "
+  ],
+  "screenshot": "get-tenants-features-failed.png"
+}

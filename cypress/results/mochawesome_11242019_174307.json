@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-11-24T22:43:00.939Z",
+    "end": "2019-11-24T22:43:07.499Z",
+    "duration": 6560,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "94785fdc-bbde-4bbf-8787-7bbf93374d20",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fe0007bc-da1b-44d9-8e99-e815dac45325",
+          "title": "Get access token",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get access token",
+              "fullTitle": "Get access token Get access token",
+              "timedOut": null,
+              "duration": 5192,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'POST',\n  url: 'http://fodqa11-iis3/oauth/token',\n  form: true,\n  body: {\n    grant_type: 'client_credentials',\n    scope: 'api-tenant',\n    client_id: '08f144a6-2823-46d3-856d-15a5db8a5320',\n    client_secret: 'aG14NGpAV1gyWjJ0WnBzeiZGZy40b00zZmxodEJV0'\n  }\n}).then(function (response) {\n  cy.log(response.body);\n  assert.equal(response.status, 200);\n  expect(response.body).to.not.be.null;\n  cy.log(response.body.expires_in);\n  window.localStorage.setItem('access_token', response.body.access_token);\n  var access_token = response.body.access_token;\n  cy.writeFile('cypress/fixtures/access_token.json', {\n    accessToken: access_token\n  });\n});",
+              "err": {},
+              "uuid": "3e1f48d5-8056-46ce-a0b5-a73fd303ff7f",
+              "parentUUID": "fe0007bc-da1b-44d9-8e99-e815dac45325",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3e1f48d5-8056-46ce-a0b5-a73fd303ff7f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5192,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.0.1"
+    }
+  }
+}

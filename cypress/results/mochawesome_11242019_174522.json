@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2019-11-24T22:44:42.993Z",
+    "end": "2019-11-24T22:45:22.548Z",
+    "duration": 39555,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1f175443-be25-4c56-be4a-77f6721d544c",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "16ca4348-af48-4db5-95a0-88a7981df497",
+          "title": "Login to tenant site and verify  user land on application page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify tenant user can login and user land on application page",
+              "fullTitle": "Login to tenant site and verify  user land on application page verify tenant user can login and user land on application page",
+              "timedOut": null,
+              "duration": 703,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/FoD\\\\loginToTenantSite.spec.js/Login to tenant site and verify  user land on application page--verify tenant user can login and user land on application page(failed).png\"",
+              "code": "cy.visit(Cypress.env(\"tenantSite\"));\ncy.loginTenant();\ncy.get('#main').screenshot();\ncy.get('#primary-nav').should('exist').and('be.visible').screenshot();\ncy.url().should('contain', 'Applications');\ncy.get('#nav-collapse > :nth-child(1) > .active > a').should('contain', 'Applications').and('have.attr', 'href');\ncy.get('#nav-collapse > :nth-child(1) > :nth-child(2) > a').should('contain', 'Dashboard').and('have.attr', 'href');\ncy.get('#nav-collapse > :nth-child(1) > :nth-child(3) > a').should('contain', 'Reports').and('have.attr', 'href');\ncy.get('#nav-collapse > :nth-child(1) > :nth-child(4) > a').should('contain', 'Administration').and('have.attr', 'href');\ncy.get('#side-nav').should('exist').and('be.visible').screenshot();",
+              "err": {
+                "message": "CypressError: cy.click() failed because it requires a DOM element.\n\nThe subject received was:\n\n  > undefined\n\nThe previous command that ran was:\n\n  > cy.get()\n\nBecause this error occurred during a 'after all' hook we are skipping the remaining tests in the current suite: 'Login to tenant site and ve...'",
+                "estack": "CypressError: cy.click() failed because it requires a DOM element.\n\nThe subject received was:\n\n  > undefined\n\nThe previous command that ran was:\n\n  > cy.get()\n\nBecause this error occurred during a 'after all' hook we are skipping the remaining tests in the current suite: 'Login to tenant site and ve...'\n    at Object.cypressErr (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:104836:11)\n    at Object.throwErr (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:104791:18)\n    at Object.throwErrByPath (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:104823:17)\n    at ensureElement (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:93738:21)\n    at validateType (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:93610:16)\n    at Object.ensureSubjectByType (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:93638:9)\n    at pushSubjectAndValidate (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:100243:15)\n    at Context.<anonymous> (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:100502:18)\n    at https://fodqa11-iis2/__cypress/runner/cypress_runner.js:100025:33\n    at tryCatcher (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:138875:23)\n    at Promise._settlePromiseFromHandler (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:136811:31)\n    at Promise._settlePromise (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:136868:18)\n    at Promise._settlePromiseCtx (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:136905:10)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:133605:12)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:133610:10)\n    at Async.drainQueues (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:133484:14)",
+                "diff": null
+              },
+              "uuid": "ceba3f2f-3628-4cbf-80d9-517f5066d572",
+              "parentUUID": "16ca4348-af48-4db5-95a0-88a7981df497",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "ceba3f2f-3628-4cbf-80d9-517f5066d572"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 703,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.0.1"
+    }
+  }
+}

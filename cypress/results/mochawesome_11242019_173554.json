@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-11-24T22:35:21.799Z",
+    "end": "2019-11-24T22:35:54.514Z",
+    "duration": 32715,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5523235b-1b48-4874-bfb8-1b1ef2cb1c69",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1a4cf48c-7427-46cb-83b4-20dff4e6e4a4",
+          "title": "Verify application page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify tenant land on application after login to the site",
+              "fullTitle": "Verify application page Verify tenant land on application after login to the site",
+              "timedOut": null,
+              "duration": 27792,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env(\"tenantSite\"));\ncy.loginTenant();\ncy.url().should('include', 'Applications');\ncy.screenshot();\ncy.get('#main').should('exist');\ncy.get('#nav-collapse > :nth-child(1) > .active > a').should('contain', 'Applications').and('have.attr', 'href');\ncy.get('.section').should('contain', 'Your Applications');",
+              "err": {},
+              "uuid": "5ed1cac2-4106-4091-9d2f-1bc4c1ceb962",
+              "parentUUID": "1a4cf48c-7427-46cb-83b4-20dff4e6e4a4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify side navigation tabs displayed and verify mouseover ",
+              "fullTitle": "Verify application page Verify side navigation tabs displayed and verify mouseover ",
+              "timedOut": null,
+              "duration": 413,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#side-nav').should('exist').and('be.visible').screenshot();\ncy.get('#side-nav > ul > li:nth-child(2)').invoke('trigger', 'mouseover', 'text').then(function (text) {\n  var tooltip = text;\n  expect(tooltip).to.contain('Your Applications');\n});\ncy.get('#side-nav > ul > li:nth-child(3)').invoke('trigger', 'mouseover', 'text').then(function (text) {\n  var tooltip = text;\n  expect(tooltip).to.contain('Your Releases');\n});\ncy.get('#side-nav > ul > li:nth-child(4)').invoke('trigger', 'mouseover', 'text').then(function (text) {\n  var tooltip = text;\n  expect(tooltip).to.contain('Your Scans');\n});\ncy.get('#side-nav > ul > li:nth-child(5)').invoke('trigger', 'mouseover', 'text').then(function (text) {\n  var tooltip = text;\n  expect(tooltip).to.contain('Open Source Components');\n}); //await generator.create(jsonReport)",
+              "err": {},
+              "uuid": "160be9f5-5f3e-4a19-8921-e26d82bc6d20",
+              "parentUUID": "1a4cf48c-7427-46cb-83b4-20dff4e6e4a4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5ed1cac2-4106-4091-9d2f-1bc4c1ceb962",
+            "160be9f5-5f3e-4a19-8921-e26d82bc6d20"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 28205,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.0.1"
+    }
+  }
+}

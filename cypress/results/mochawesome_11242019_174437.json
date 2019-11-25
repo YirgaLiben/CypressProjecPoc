@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2019-11-24T22:43:59.396Z",
+    "end": "2019-11-24T22:44:37.306Z",
+    "duration": 37910,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "89bebede-f80e-430a-8e7d-03578c1ac833",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fa10e18e-29b1-4c5b-91ba-b907f265bb5d",
+          "title": "Verify tenant login page - ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify tenant page displayed and check all the elements displayed  ",
+              "fullTitle": "Verify tenant login page -  Verify tenant page displayed and check all the elements displayed  ",
+              "timedOut": null,
+              "duration": 29638,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/FoD\\\\loginPageTestpoc.spec.js/Verify tenant login page - --Verify tenant page displayed and check all the elements displayed  (failed).png\"",
+              "code": "cy.visit(Cypress.env(\"tenantSite\"));\ncy.get('.plus_art > object').should('exist');\ncy.get('#mf-logo').should('exist');\ncy.get('.btn-link').should('exist').and('contain', 'Fortify Security Products');\ncy.get('#nav-collapse > .btn-primary').should('have.attr', 'href').and('include', 'https://software.microfocus.com/en-us/software/fortify-on-demand');\ncy.get('h1').should('contain', \"Fortify\");\ncy.get('h2').should('contain', 'on Demand');\ncy.get('#loginEmail').should('have.attr', 'placeholder', 'Username');\ncy.get('#loginPassword').should('have.attr', 'placeholder', 'Password');\ncy.get('#loginTenantID').should('have.attr', 'placeholder', 'Tenant');\ncy.get('.forgot-password > a').should('exist').and('contain', 'Forgot Your Password?');\ncy.get('.mf-logo > object').should('exist');\ncy.get('#btnLogin').should('exist').and('be.enabled');\ncy.get('#btnLogin').click();\ncy.get('#login-error > ul > li').should('exist').and('contain', 'Username is required.');\ncy.get('#loginEmail').type('fake');\ncy.get('#btnLogin').click();\ncy.get('#login-error > ul > li').should('exist').and('contain', 'Password is required.');\ncy.get('.catch_phrase').should('exist').and('contain', 'Find Fix');\ncy.xpath('//a[text()=\"Fortify\"]').should('have.attr', 'href', 'https://software.microfocus.com/en-us/software/fortify-on-demand').and(); // Cypress.currentTest.retries(2)",
+              "err": {
+                "message": "CypressError: Timed out retrying: Expected to find element: '#login-error > ul > li', but never found it.",
+                "estack": "CypressError: Timed out retrying: Expected to find element: '#login-error > ul > li', but never found it.\n    at Object.cypressErr (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:104836:11)\n    at Object.throwErr (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:104791:18)\n    at Object.throwErrByPath (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:104823:17)\n    at retry (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:96197:16)\n    at onFailFn (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:85350:16)\n    at tryCatcher (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:138875:23)\n    at Promise._settlePromiseFromHandler (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:136811:31)\n    at Promise._settlePromise (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:136868:18)\n    at Promise._settlePromise0 (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:136913:10)\n    at Promise._settlePromises (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:136988:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:133600:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:133610:10)\n    at Async.drainQueues (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:133484:14)",
+                "diff": null
+              },
+              "uuid": "6c708328-b59b-497d-a85b-99f39eabaf8b",
+              "parentUUID": "fa10e18e-29b1-4c5b-91ba-b907f265bb5d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "6c708328-b59b-497d-a85b-99f39eabaf8b"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 29638,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.0.1"
+    }
+  }
+}

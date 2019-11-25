@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-11-24T22:37:47.521Z",
+    "end": "2019-11-24T22:38:18.801Z",
+    "duration": 31280,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c232fefa-def4-46bd-9e67-00fe0e1f8084",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "07e7671d-d397-4d48-a895-a67c62a0f2dd",
+          "title": "File upload test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login to Fod site as a tenant",
+              "fullTitle": "File upload test login to Fod site as a tenant",
+              "timedOut": null,
+              "duration": 28222,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env(\"tenantSite\"));\ncy.get('#loginEmail').type('AUTO-TAM');\ncy.get('#loginPassword').type('Spi!pass007^');\ncy.get('#loginTenantID').type('tenantid');\ncy.get('#btnLogin').click();\ncy.get('input[type=submit][value=OK]').click();\ncy.get('[data-application-id=\"6\"] > :nth-child(1) > h4 > a').click();\ncy.get(':nth-child(4) > .nav-tab > :nth-child(1) > .nav-tab-icon > .ff').click();\ncy.get('[data-release-id=\"6\"][data-scan-id=\"9\"] > :nth-child(1) > a').click();\ncy.get(':nth-child(4) > .nav-tab > :nth-child(1) > .nav-tab-icon > .ff').click();\ncy.get('.section-right > .dropdown > .btn').click();\ncy.get('.section-right > .dropdown > .dropdown-menu > :nth-child(1) > a').click();\ncy.get(\"#fprscanUploadBrowse\").click(); // const fileName = 'upload.pdf';\n// cy.fixture(fileName).then(fileContent => {\n//     cy.get('.section-right > .dropdown > .btn').uploadFile({ fileContent, fileName, mimeType: 'application/pdf' }, { subjectType: 'input-group-btn' });\n// });\ncy.get(\"#fprscanUploadBrowse\").click({\n  force: true\n});\ncy.uploadFile('static.java.fpr', '#fprscanUploadBrowse > input[type=file]', 'application/fpr');\ncy.get('#fprscanUpload').click(); // const fileName = 'static.java.fpr';\n// cy.fixture(fileName).then(fileContent => {\n//     cy.get('#fprscanUploadBrowse > input[type=file]').upload({ fileContent, fileName, mimeType: 'application/fpr' });\n// });\n// cy.fixture('static.java.fpr', 'hex').then((excelHex) => {\n//     const excelBytes = hexStringToByte(excelHex);\n//     //create a File object\n//     const file = new File([excelBytes], 'static.java.fpr', {\n//         type: 'application/fpr'\n//     });\n//     //and make the drop\n//     cy.get('#fprscanUploadBrowse > input[type=file]').trigger('drop', {\n//         dataTransfer: {\n//             files: [file],\n//         },\n//     });\n// });\n// const selector = '#fprscanUploadFileName'\n// const fixturePath = 'static.java.fpr' // fixtures/dummy.pdf\n// const type = 'application/fpr' // image/png, etc (content_type)\n// cy.get(selector).then(subject => cy.window().then(win => cy\n//   .fixture(fixturePath, 'base64')\n//   .then(Cypress.Blob.base64StringToBlob)\n//   .then((blob) => {\n//     const el = subject[0]\n//     const testFile = new win.File([blob], name, { type })\n//     const dataTransfer = new win.DataTransfer()\n//     dataTransfer.items.add(testFile)\n//     el.files = dataTransfer.files\n//     cy.wrap(subject).trigger('change', { force: true })\n//   })))",
+              "err": {},
+              "uuid": "7f57159b-72c8-467b-a00b-122bfb0d15a6",
+              "parentUUID": "07e7671d-d397-4d48-a895-a67c62a0f2dd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7f57159b-72c8-467b-a00b-122bfb0d15a6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 28222,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.0.1"
+    }
+  }
+}

@@ -1,11 +1,11 @@
 {
-  "specName": "loginPageTest.spec.js",
+  "specName": "loginPageTestpoc.spec.js",
   "title": "Verify tenant page displayed and check all the elements displayed  ",
   "suiteName": "Verify tenant login page - ",
   "testName": "Verify tenant login page -  Verify tenant page displayed and check all the elements displayed  ",
-  "testError": "Timed out retrying: Cannot read property 'split' of undefined",
+  "testError": "Timed out retrying: Expected to find element: '#login-error > ul > li', but never found it.",
   "testCommands": [
-    "visit https://fodqa7-iis2/login",
+    "visit https://fodqa11-iis2/login",
     "get .plus_art > object",
     "assert expected **<object>** to exist in the DOM",
     "get #mf-logo",
@@ -36,22 +36,8 @@
     "assert expected **<input#btnLogin.btn.btn-primary.btn-primary-flat>** to be **enabled**",
     "get #btnLogin",
     "click ",
-    "xhr  POST https://fodqa7-iis2/Account/TenantLogin",
     "get #login-error > ul > li",
-    "assert expected **#login-error > ul > li** to exist in the DOM",
-    "assert expected **<li>** to contain **Username is required.**",
-    "get #loginEmail",
-    "type fake",
-    "get #btnLogin",
-    "click ",
-    "xhr  POST https://fodqa7-iis2/Account/TenantLogin",
-    "get #login-error > ul > li",
-    "assert expected **<li>** to exist in the DOM",
-    "assert expected **<li>** to contain **Password is required.**",
-    "get .catch_phrase",
-    "assert expected **<div.catch_phrase>** to exist in the DOM",
-    "assert expected **<div.catch_phrase>** to contain **Find Fix**",
-    "assert expected **<a>** to have attribute **href** with the value **https://software.microfocus.com/en-us/software/fortify-on-demand**"
+    "assert expected **#login-error > ul > li** to exist in the DOM"
   ],
   "screenshot": "verify-tenant-page-displayed-and-check-all-the-elements-displayed-failed.png"
 }

@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-11-24T22:36:12.889Z",
+    "end": "2019-11-24T22:36:38.650Z",
+    "duration": 25761,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "70898918-34aa-4598-8b9d-8634815044c8",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "210e760a-5af4-45d6-ac1b-b7c1f335fc26",
+          "title": "Verify application page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify application page displayed and new application button displayed and enabled",
+              "fullTitle": "Verify application page Verify application page displayed and new application button displayed and enabled",
+              "timedOut": null,
+              "duration": 22671,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env(\"tenantSite\"));\ncy.loginTenant();\ncy.url().should('include', 'Applications');\ncy.get('.section-right > .btn-primary').should('contain', 'New Application').and('be.enabled');\ncy.get('.section-right > .btn-primary').click();\ncy.get('#modalCreateApplication').should('exist');\ncy.MobileScanApplicationName(); // cy.get('#createApplicationName').then(($appName)=>{\n//     const appName = $appName.val()\n//     cy.log(appName)\n// })\ncy.get('#createApplicationBusinessCriticality').select('Medium');\ncy.get('#createApplicationApplicationType').select('Mobile');\ncy.get('#createApplicationDescription').type('Mobile application');\ncy.get('#createApplicationEmailNotifications').should('have.value', '');\ncy.get('#createApplicationEmailNotifications').type('Cypress@email.com').should('have.value', 'Cypress@email.com');\ncy.get('[data-action=\"next\"]').click();\ncy.get('#createApplicationReleaseName').type('test');\ncy.get('#createApplicationReleaseSDLC').select('Production');\ncy.get('#createApplicationReleaseDescription').type('test');\ncy.get('[data-action=\"next\"]').click();\ncy.get('#createApplicationAttributeContainer > :nth-child(1) > .form-control').select('A');\ncy.get('#createApplicationAttributeContainer > :nth-child(2) > .form-control').type('autoText');\ncy.get('#createApplicationAttributeContainer > :nth-child(3) > .form-control').select('True');\ncy.get('[data-action=\"next\"]').click(); // cy.get('.buttonblock > .btn-primary').should('exist').and('be.enabled').click()\n// cy.get('.section-right > :nth-child(2) > .btn').click()\n//cy.get('[data-itemname=\"mobile\"] > a').click() //start\n// cy.get('[data-groupid=\"7\"] > .action-cell > .control > .control-indicator').click().should('have.class','control-indicator')\n// \ncy.get('[data-groupid=\"7\"] > .action-cell > .control > .control-indicator').not('[disabled]').click().should('have.class', 'control-indicator');\ncy.get('[data-action=\"next\"]').click();",
+              "err": {},
+              "uuid": "520cb173-17a0-4cf4-95cd-390d8d77ee31",
+              "parentUUID": "210e760a-5af4-45d6-ac1b-b7c1f335fc26",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "520cb173-17a0-4cf4-95cd-390d8d77ee31"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 22671,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.0.1"
+    }
+  }
+}

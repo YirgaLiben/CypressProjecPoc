@@ -3,7 +3,7 @@
   "title": "Visual test adding a tenants ",
   "suiteName": "Applitools visual validation POC",
   "testName": "Applitools visual validation POC Visual test adding a tenants ",
-  "testError": "write EPROTO 203898904:error:10000419:SSL routines:OPENSSL_internal:TLSV1_ALERT_ACCESS_DENIED:../../third_party/boringssl/src/ssl/tls_record.cc:587:SSL alert number 49\n\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: 'Applitools visual validatio...'",
+  "testError": "Request failed with status code 403 (Forbidden)\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: 'Applitools visual validatio...'",
   "testCommands": [
     "Eyes: open Object{3}",
     "then {timeout: 15000}, function(){}"

@@ -1,0 +1,152 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 1,
+    "pending": 0,
+    "failures": 2,
+    "start": "2019-11-24T22:32:41.938Z",
+    "end": "2019-11-24T22:34:20.406Z",
+    "duration": 98468,
+    "testsRegistered": 3,
+    "passPercent": 33.33333333333333,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d97c774f-de2b-4edb-be5a-26b45a0ddefe",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "84730879-cbae-484b-b4a2-a5212fdac30f",
+          "title": "Admin Site Settings Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify admin site setting page displayed",
+              "fullTitle": "Admin Site Settings Page Verify admin site setting page displayed",
+              "timedOut": null,
+              "duration": 46962,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/FoD\\\\AdminSiteSettings.spec.js/Admin Site Settings Page--Verify admin site setting page displayed(failed).png\"",
+              "code": "cy.LoginToAdminSite('zeusadmin', 'Spi!pass007^');\ncy.get(':nth-child(1) > .dropdown > .dropdown-toggle').should('exist');\ncy.get('.dropdown-menu > :nth-child(6) > a').click({\n  force: true\n});\ncy.get(':nth-child(1) > .contextbar > .section').should('exist').and('contain', 'Configuration');\ncy.get('.SPITabContentGroup > .contextbar > .section').should('exist').and('contain', 'Site Settings');\ncy.get('#side-nav > ul > li:nth-child(2) > a').should('have.class', ' nav-tab selected');\nvar siteSettingName = Cypress.$('[data-setting-id=\"143\"] > :nth-child(2)').text();\ncy.get('[data-setting-id=\"143\"] > .action-cell > .btn').click();\ncy.log(siteSettingName);",
+              "err": {
+                "message": "CypressError: Timed out retrying: expected '<a..nav-tab.selected>' to have class ' nav-tab selected'",
+                "estack": "CypressError: Timed out retrying: expected '<a..nav-tab.selected>' to have class ' nav-tab selected'\n    at Object.cypressErr (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:104836:11)\n    at Object.throwErr (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:104791:18)\n    at Object.throwErrByPath (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:104823:17)\n    at retry (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:96197:16)\n    at onFailFn (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:85350:16)\n    at tryCatcher (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:138875:23)\n    at Promise._settlePromiseFromHandler (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:136811:31)\n    at Promise._settlePromise (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:136868:18)\n    at Promise._settlePromise0 (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:136913:10)\n    at Promise._settlePromises (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:136988:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:133600:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:133610:10)\n    at Async.drainQueues (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:133484:14)",
+                "diff": null
+              },
+              "uuid": "3b984c7d-728d-4e3a-8986-358a10227534",
+              "parentUUID": "84730879-cbae-484b-b4a2-a5212fdac30f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Site Edit name and value",
+              "fullTitle": "Admin Site Settings Page Verify Site Edit name and value",
+              "timedOut": null,
+              "duration": 19,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//cy.get('[data-setting-id=\"143\"] > .action-cell > .btn').click()\n//cy.get('[data-setting-id=\"143\"] > .action-cell > .btn').click()\n///  cy.get('[data-setting-id=\"143\"] > .action-cell > .btn').click()\n//cy.wait(100)\ncy.get('#modalEditSiteSetting > .modal-custom-header').should('be.exist').and('contain', 'Edit Site Setting'); // cy.get('.modal-custom-content > :nth-child(1) > :nth-child(1)').should('exist').and('contain','Name')\n// cy.get(':nth-child(1) > .form-control').should('be.disabled').and('contain.value','AgentToken')",
+              "err": {},
+              "uuid": "521da9fc-4275-4e87-a208-9d6afb86e739",
+              "parentUUID": "84730879-cbae-484b-b4a2-a5212fdac30f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "pdf test",
+              "fullTitle": "Admin Site Settings Page pdf test",
+              "timedOut": null,
+              "duration": 25363,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/FoD\\\\AdminSiteSettings.spec.js/Admin Site Settings Page--pdf test(failed).png\"",
+              "code": "var fileName = 'static.java.fpr';\ncy.fixture(fileName).then(function (fileContent) {\n  cy.get('#filesToUpload').upload({\n    fileContent: fileContent,\n    fileName: fileName,\n    mimeType: 'application/pdf'\n  }, {\n    subjectType: 'input'\n  });\n});",
+              "err": {
+                "message": "CypressError: Timed out retrying: Expected to find element: '#filesToUpload', but never found it.",
+                "estack": "CypressError: Timed out retrying: Expected to find element: '#filesToUpload', but never found it.\n    at Object.cypressErr (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:104836:11)\n    at Object.throwErr (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:104791:18)\n    at Object.throwErrByPath (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:104823:17)\n    at retry (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:96197:16)\n    at onFailFn (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:85350:16)\n    at tryCatcher (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:138875:23)\n    at Promise._settlePromiseFromHandler (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:136811:31)\n    at Promise._settlePromise (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:136868:18)\n    at Promise._settlePromise0 (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:136913:10)\n    at Promise._settlePromises (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:136988:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:133600:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:133610:10)\n    at Async.drainQueues (http://fodqa11-iis1/__cypress/runner/cypress_runner.js:133484:14)",
+                "diff": null
+              },
+              "uuid": "8148c7dd-2ff4-48a7-aebf-463827c1e353",
+              "parentUUID": "84730879-cbae-484b-b4a2-a5212fdac30f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "521da9fc-4275-4e87-a208-9d6afb86e739"
+          ],
+          "failures": [
+            "3b984c7d-728d-4e3a-8986-358a10227534",
+            "8148c7dd-2ff4-48a7-aebf-463827c1e353"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 72344,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.0.1"
+    }
+  }
+}

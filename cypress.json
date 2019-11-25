@@ -1,6 +1,6 @@
 {
   "chromeWebSecurity": false,
-  "trashAssetsBeforeRuns":false,
+  "trashAssetsBeforeRuns": false,
   "env": {
     "tenant": "AUTO-TAM",
     "admin": "zeusadmin",
@@ -22,26 +22,22 @@
       "password": "SPI!password",
       "server": "16.103.234.203",
       "options": {
-          "database": "ZEUS",
-          "encrypt": true,
-          "rowCollectionOnRequestCompletion" : true
+        "database": "ZEUS",
+        "encrypt": true,
+        "rowCollectionOnRequestCompletion": true
       }
-  
-  },
-  "dbconfig": {
-    "server": "16.103.234.203",
-    "user": "sa",
-    "password": "SPI!pass word",
-    "database": "ZEUS",
-    "port": 1433,
-
-    "options": {
+    },
+    "dbconfig": {
+      "server": "16.103.234.203",
+      "user": "sa",
+      "password": "SPI!pass word",
+      "database": "ZEUS",
+      "port": 1433,
+      "options": {
         "encrypt": false
+      }
     }
-
-  }
-},
-
+  },
   "reporter": "mochawesome",
   "reporterOptions": {
     "reportDir": "cypress/results",
@@ -50,7 +46,6 @@
     "json": true,
     "timestamp": "mmddyyyy_HHMMss"
   },
-
   "scripts": {
     "cy:run": "cypress run",
     "test": "mocha"
@@ -60,7 +55,6 @@
   "responseTimeout": 25000,
   "video": false,
   "theme": "dark",
-  "waitForAnimations":true
-
-  
+  "waitForAnimations": true,
+  "projectId": "wzz83j"
 }
