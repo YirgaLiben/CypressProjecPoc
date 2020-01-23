@@ -1,0 +1,12 @@
+{
+  "specName": "FodsqlPoc.spec.js",
+  "title": "execute sql script and save the results in json format",
+  "suiteName": "sql run poc",
+  "testName": "sql run poc execute sql script and save the results in json format",
+  "testError": "Cannot read property 'stringify' of undefined",
+  "testCommands": [
+    "exec node sql2.js",
+    "then function(){}"
+  ],
+  "screenshot": "execute-sql-script-and-save-the-results-in-json-format-failed.png"
+}

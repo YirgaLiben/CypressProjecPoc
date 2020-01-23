@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2019-12-30T14:58:44.338Z",
+    "end": "2019-12-30T15:01:12.835Z",
+    "duration": 148497,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "19bfd4c8-9992-4132-bc48-78ac8fe8d120",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9486d238-a82c-4fa9-96ec-e8f5ce35d386",
+          "title": "App Summary and Attributes Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Creat a tenants",
+              "fullTitle": "App Summary and Attributes Test Creat a tenants",
+              "timedOut": null,
+              "duration": 25742,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.loginToAdminSite(\"zeusadmin\", \"Spi!pass007^\");\ntenantsPage.navigateToTenantsPage();\ntenantsPage.createTenant(tenantId);\nCypress.currentTest.retries(1);",
+              "err": {},
+              "uuid": "25dd7169-a72e-4adc-982f-0d6d6449cd86",
+              "parentUUID": "9486d238-a82c-4fa9-96ec-e8f5ce35d386",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create an application and verify tenants  App summary page",
+              "fullTitle": "App Summary and Attributes Test Create an application and verify tenants  App summary page",
+              "timedOut": null,
+              "duration": 49697,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.loginToTenantSite('AUTO-TAM', 'Spi!pass007^', 'tenantId');\napplicationPage.createApplication(appName, 'High', 'Web / Thick-Client', 'Production');\napplicationPage.selectCreatedApplication(appName);\nsettingsPage.clickSettingTab();\nsettingsPage.verifyApplicationSummaryPageDisplayed();\nsettingsPage.verifyApplicationSummaryTabDisplayed();\nsettingsPage.verifyApplicationSaveValidation();\nsettingsPage.verifyApplicationNameDisplayed(\"\".concat(appName));\nsettingsPage.verifyBusinessCriticalitySelected('High');\nsettingsPage.verifyApplicationTypeDisplayed('Web / Thick-Client');\nsettingsPage.verifyApplicationDescriptionDisplayed('The most epic App ever');\nsettingsPage.verifyEmailValidation();\nsettingsPage.enterAndVerifyAdditionalEmails('Yahoo@gmail.com;test@test.com');\nsettingsPage.verifyAppDeletionPopUp();\nsettingsPage.updateApplicationSummaryAndVerifyUpdateSaved();\nsettingsPage.verifyApplicationDeleted(appName);\nCypress.currentTest.retries(1);",
+              "err": {},
+              "uuid": "a6471d3b-9d33-41c9-a1e2-86ef699d04a2",
+              "parentUUID": "9486d238-a82c-4fa9-96ec-e8f5ce35d386",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create an app  and verify application attributes page",
+              "fullTitle": "App Summary and Attributes Test Create an app  and verify application attributes page",
+              "timedOut": null,
+              "duration": 60568,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/FoD\\\\FodAppSummaryAndAttributesTest.spec.js/App Summary and Attributes Test--Create an app  and verify application attributes page(failed).png\"",
+              "code": "loginPage.loginToTenantSite('AUTO-TAM', 'Spi!pass007^', 'tenantId');\napplicationPage.createApplication(appName, 'High', 'Web / Thick-Client', 'Production');\nattributesPage.navigateToSettingsAttributesPage();\nattributesPage.addAttributes('CustomAttribute1', 'Text', 'isRequired');\nattributesPage.addAttributes('CustomPicklist', 'Picklist', 'notRequired');\nattributesPage.addAttributes('CustomAttribute3', 'Boolean', 'isRequired');\nattributesPage.addAttributes('CustomAttributeDate', 'Date', 'notRequired');\nattributesPage.addAttributes('CustomAttributeUser', 'User', 'notRequired');\napplicationPage.navigateToApplicationsPage();\napplicationPage.searchForCreatedApplication(appName);\nsettingsPage.clickSettingTab();\nsettingsPage.clickApplicationAttributesTab();\nsettingsPage.verifyAddedAttributesDisplayInAppAttributesPage();\nsettingsPage.verifyApplicationAttributesSaveValidation();\nsettingsPage.createApplicationAndVerifyAttributes();",
+              "err": {
+                "message": "CypressError: Timed out retrying: Expected to find content: 'CustomAttribute1' within the element: [ <label.form-group.control.checkbox>, 6 more... ] but never did.",
+                "estack": "CypressError: Timed out retrying: Expected to find content: 'CustomAttribute1' within the element: [ <label.form-group.control.checkbox>, 6 more... ] but never did.\n    at Object.cypressErr (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:106136:11)\n    at Object.throwErr (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:106091:18)\n    at Object.throwErrByPath (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:106123:17)\n    at retry (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:96804:16)\n    at onFailFn (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:85633:16)\n    at tryCatcher (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:140400:23)\n    at Promise._settlePromiseFromHandler (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:138336:31)\n    at Promise._settlePromise (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:138393:18)\n    at Promise._settlePromise0 (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:138438:10)\n    at Promise._settlePromises (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:138513:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:135125:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:135135:10)\n    at Async.drainQueues (https://fodqa11-iis2/__cypress/runner/cypress_runner.js:135009:14)",
+                "diff": null
+              },
+              "uuid": "5ad24578-a1fb-435b-8b1c-b15a825e9707",
+              "parentUUID": "9486d238-a82c-4fa9-96ec-e8f5ce35d386",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "25dd7169-a72e-4adc-982f-0d6d6449cd86",
+            "a6471d3b-9d33-41c9-a1e2-86ef699d04a2"
+          ],
+          "failures": [
+            "5ad24578-a1fb-435b-8b1c-b15a825e9707"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 136007,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.0.1"
+    }
+  }
+}

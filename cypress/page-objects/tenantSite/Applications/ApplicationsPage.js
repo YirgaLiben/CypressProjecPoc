@@ -48,9 +48,10 @@ class ApplicationsPage extends BasePage {
         cy.get('[data-action="add-application"]').should('not.exist')
         cy.get('.navbar-nav a').contains('Applications').click()
         cy.get('[data-role="searchText"]').type(`${appName}{enter}`)
+        this.navigateToApplicationsPage()
         cy.contains(appName).should('exist')
         cy.reload()
-        cy.get('.paging-section-total > span', { timeout: 30000 }).should('contain.text','1 found')
+      //  cy.get('.paging-section-total > span', { timeout: 30000 }).should('contain.text','1 found')
         
 
     }
@@ -69,7 +70,9 @@ class ApplicationsPage extends BasePage {
     searchForCreatedApplication(appName)
     {
         cy.get('[data-role="searchText"]').type(`${appName}{enter}`)
-        cy.wait(2000)
+        cy.reload()
+
+        this.navigateToApplicationsPage()
         cy.reload()
         cy.contains(`${appName}`).should('exist')
         cy.get(`a[title="${appName}"]`).click()

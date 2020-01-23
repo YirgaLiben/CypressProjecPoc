@@ -1,0 +1,27 @@
+{
+  "specName": "FodTenantLogInPageTest.spec.js",
+  "title": "Error message should display when trying to login without tenantID",
+  "suiteName": "page object test",
+  "testName": "page object test Error message should display when trying to login without tenantID",
+  "testError": "Timed out retrying: Expected to find element: 'loginPassword', but never found it.",
+  "testCommands": [
+    "get #loginEmail",
+    "clear ",
+    "get #loginPassword",
+    "clear ",
+    "get #loginTenantID",
+    "clear ",
+    "get #loginEmail",
+    "type username",
+    "get #loginPassword",
+    "type password",
+    "get #btnLogin",
+    "click ",
+    "xhr  POST https://fodqa11-iis2/Account/TenantLogin",
+    "get #loginEmail",
+    "assert expected **<input#loginEmail.form-control.input-lg>** to have value **username**",
+    "get loginPassword",
+    "assert expected **{ Object (length, prevObject, ...) }** to have value **password**"
+  ],
+  "screenshot": "error-message-should-display-when-trying-to-login-without-tenant-id-failed.png"
+}

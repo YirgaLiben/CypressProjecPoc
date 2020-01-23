@@ -1,0 +1,25 @@
+{
+  "specName": "FodChatIconTest.spec.js",
+  "title": "Verify Chat Icon tooltip and PopUp displayed",
+  "suiteName": "Chat Icon test",
+  "testName": "Chat Icon test Verify Chat Icon tooltip and PopUp displayed",
+  "testError": "Timed out retrying: cy.select() failed because it could not find a single <option> with value or text matching: 'AUTO-TENANT'",
+  "testCommands": [
+    "visit https://fodqa7-iis2/login",
+    "get #loginEmail",
+    "type AUTO-TAM",
+    "get #loginPassword",
+    "type Spi!pass007^",
+    "get #loginTenantID",
+    "type tenantid",
+    "get #btnLogin",
+    "click ",
+    "xhr  POST https://fodqa7-iis2/Account/TenantLogin",
+    "get #SelectedValue",
+    "page load --waiting for new page to load--",
+    "new url https://fodqa7-iis2/Account/SwitchTenant?ReturnURL=/Applications",
+    "xhr  POST https://fodqa7-iis2/Tours/GetIncompleteTours",
+    "select AUTO-TENANT"
+  ],
+  "screenshot": "verify-chat-icon-tooltip-and-pop-up-displayed-failed.png"
+}

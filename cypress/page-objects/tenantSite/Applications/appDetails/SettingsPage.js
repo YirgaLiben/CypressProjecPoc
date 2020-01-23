@@ -6,6 +6,8 @@ import AttributesPage from '../../../tenantSite/administration/settings/Attribut
 
 class SettingPage extends BasePage {
 
+    
+
 
     clickSettingTab() {
         cy.get('div.nav-tabs li>a[data-tabaction="SettingsSummary"]').click({ force: true })
@@ -225,6 +227,9 @@ class SettingPage extends BasePage {
         cy.get('#createApplicationSummaryContainerRelease').should('exist')
         cy.get('[data-action="save"]').click()
         cy.get('[data-action="save"]').should('not.exist')
+        cy.reload()
+        attributesPage.navigateToSettingsAttributesPage()
+        cy.get('#attributesGrid').should('be.visible')
         applicationPage.navigateToApplicationsPage()
         this.searchForCreatedApplication(appName)
         this.clickSettingTab()
@@ -241,12 +246,12 @@ class SettingPage extends BasePage {
 
     searchForCreatedApplication(appName)
     {
+        const applicationPage = new ApplicationPage()
         cy.get('[data-role="searchText"]').type(`${appName}{enter}`)
-        cy.wait(2000)
         cy.reload()
         cy.get('[data-role="searchText"]').clear()
         cy.get('[data-role="searchText"]').type(`${appName}{enter}`)
-        cy.wait(3000)
+        applicationPage.navigateToApplicationsPage()
         cy.reload()
         cy.contains(`${appName}`).should('exist')
         cy.get(`a[title="${appName}"]`).click()

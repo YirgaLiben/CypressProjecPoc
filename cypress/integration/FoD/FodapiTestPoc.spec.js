@@ -1,7 +1,7 @@
 const appName  = 'appName' + + Date.now();
 
 
-describe('sample test', () => {
+describe('sample api test', () => {
 
     beforeEach(() => {
         cy.fixture('access_token.json').then((Token) => {

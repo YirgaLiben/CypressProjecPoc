@@ -1,0 +1,200 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-12-30T16:11:58.284Z",
+    "end": "2019-12-30T16:12:13.157Z",
+    "duration": 14873,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d5315b1c-783e-42ca-a81a-2affa402d8e9",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "36c5b070-1f95-4df3-bd5a-7b76bd37da69",
+          "title": "Admin Site Login Page Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify admin site login page displayed",
+              "fullTitle": "Admin Site Login Page Test Verify admin site login page displayed",
+              "timedOut": null,
+              "duration": 1977,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "adminLoginPage.verifyAdminLoginPageDisplayed();\nCypress.currentTest.retries(1);",
+              "err": {},
+              "uuid": "8c5b63c8-4e48-4292-ac7d-db6d342700bf",
+              "parentUUID": "36c5b070-1f95-4df3-bd5a-7b76bd37da69",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Error message should display when tying to login without user name and password",
+              "fullTitle": "Admin Site Login Page Test Error message should display when tying to login without user name and password",
+              "timedOut": null,
+              "duration": 696,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "adminLoginPage.verifyErrorMessageDisplayedWithoutEnteringUserNameandPassword();",
+              "err": {},
+              "uuid": "648f54d0-063d-449f-b22d-1ec2b49315ff",
+              "parentUUID": "36c5b070-1f95-4df3-bd5a-7b76bd37da69",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Error message should display when trying to login without password",
+              "fullTitle": "Admin Site Login Page Test Error message should display when trying to login without password",
+              "timedOut": null,
+              "duration": 857,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "adminLoginPage.verifyErrorMessageDisplayedWithoutEnteringPassword();",
+              "err": {},
+              "uuid": "4bd97a1b-4a8c-4b8a-a9cb-62ff63cf7aab",
+              "parentUUID": "36c5b070-1f95-4df3-bd5a-7b76bd37da69",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Error message should display when trying to login without username",
+              "fullTitle": "Admin Site Login Page Test Error message should display when trying to login without username",
+              "timedOut": null,
+              "duration": 799,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "adminLoginPage.verifyErrorMessageDisplayedWithoutEnteringUsername();",
+              "err": {},
+              "uuid": "ee5ae57c-b44a-44a1-b3b5-0b0befd3c4db",
+              "parentUUID": "36c5b070-1f95-4df3-bd5a-7b76bd37da69",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Error message should display when try to login with invalid username and password",
+              "fullTitle": "Admin Site Login Page Test Error message should display when try to login with invalid username and password",
+              "timedOut": null,
+              "duration": 1298,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "adminLoginPage.verifyErrorMessageDisplayedForInvalidUsernameAndPassword();",
+              "err": {},
+              "uuid": "00a4e5ed-29f4-4c18-8cfd-686cef5252f1",
+              "parentUUID": "36c5b070-1f95-4df3-bd5a-7b76bd37da69",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Admin user can login to the site",
+              "fullTitle": "Admin Site Login Page Test Verify Admin user can login to the site",
+              "timedOut": null,
+              "duration": 3153,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "adminLoginPage.verifyAdminUserCanLoginToTheSite();",
+              "err": {},
+              "uuid": "0e317f39-fbfd-4418-90bc-45f16febcd81",
+              "parentUUID": "36c5b070-1f95-4df3-bd5a-7b76bd37da69",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8c5b63c8-4e48-4292-ac7d-db6d342700bf",
+            "648f54d0-063d-449f-b22d-1ec2b49315ff",
+            "4bd97a1b-4a8c-4b8a-a9cb-62ff63cf7aab",
+            "ee5ae57c-b44a-44a1-b3b5-0b0befd3c4db",
+            "00a4e5ed-29f4-4c18-8cfd-686cef5252f1",
+            "0e317f39-fbfd-4418-90bc-45f16febcd81"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8780,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.0.1"
+    }
+  }
+}

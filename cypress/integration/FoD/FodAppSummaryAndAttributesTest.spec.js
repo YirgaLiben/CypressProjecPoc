@@ -21,7 +21,7 @@ describe('App Summary and Attributes Test', ()=>{
     const applicationPage = new ApplicationPage()
 
 
-    it('Creat a tenants',()=>{
+    it('Create a tenant',()=>{
         
         loginPage.loginToAdminSite("zeusadmin", "Spi!pass007^");
         tenantsPage.navigateToTenantsPage()

@@ -1,0 +1,29 @@
+{
+  "specName": "FodAdminLogInPageTest.spec.js",
+  "title": "Verify Admin user can login to the site",
+  "suiteName": "Admin Site Login Page Test",
+  "testName": "Admin Site Login Page Test Verify Admin user can login to the site",
+  "testError": "Timed out retrying: expected '<a.selector>' to have class 'active'",
+  "testCommands": [
+    "get #loginEmail",
+    "clear ",
+    "get #loginPassword",
+    "clear ",
+    "get #loginEmail",
+    "type zeusadmin",
+    "get #loginPassword",
+    "type Spi!pass007^",
+    "get #btnAdminLogin",
+    "click ",
+    "xhr  POST http://fodqa11-iis1/Account/RequireSingleUserSessionConfirmation",
+    "get .navbar-nav a",
+    "xhr  POST http://fodqa11-iis1/Account/Login",
+    "page load --waiting for new page to load--",
+    "new url http://fodqa11-iis1/",
+    "xhr  POST http://fodqa11-iis1/Tours/GetIncompleteTours",
+    "contains Dashboard",
+    "assert expected **<a.selector>** to exist in the DOM",
+    "assert expected **<a.selector>** to have class **active**"
+  ],
+  "screenshot": "verify-admin-user-can-login-to-the-site-failed.png"
+}

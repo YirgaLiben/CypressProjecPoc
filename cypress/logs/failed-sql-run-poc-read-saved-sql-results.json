@@ -1,0 +1,11 @@
+{
+  "specName": "FodsqlPoc.spec.js",
+  "title": "read saved sql results",
+  "suiteName": "sql run poc",
+  "testName": "sql run poc read saved sql results",
+  "testError": "Timed out retrying: cy.readFile(\"cypress/fixtures/sql2.json\") failed because the file does not exist at the following path:\n\nC:\\FoD\\cypress\\fixtures\\sql2.json",
+  "testCommands": [
+    "readFile cypress/fixtures/sql2.json"
+  ],
+  "screenshot": "read-saved-sql-results-failed.png"
+}

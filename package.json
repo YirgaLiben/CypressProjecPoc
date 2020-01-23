@@ -4,15 +4,20 @@
   "description": "fod cypress",
   "main": "index.js",
   "scripts": {
+    "start": "npm start",
+    "ci": "start-server-and-test start-server http://localhost:8080",
+    "run": "cypress run",
+    "open": "cypress open",
     "delete:reports": "rm cypress/results/* || true",
     "prereport": "npm run delete:reports",
     "report": "cypress run",
+    "test": "FodAppSummaryAndAttributesTest.spec.js",
     "combine-reports": "mochawesome-merge --reportDir cypress/reports/mocha > cypress/reports/mochareports/report.json",
     "generate-report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareports"
   },
   "devDependencies": {
     "@4tw/cypress-drag-drop": "^1.3.0",
-    "cypress": "3.6.1",
+    "cypress": "^3.8.0",
     "cypress-capybara": "0.0.2",
     "cypress-dark": "^1.7.14",
     "cypress-failed-log": "^2.5.1",
@@ -30,12 +35,14 @@
     "mochawesome-merge": "^2.0.1",
     "mochawesome-report-generator": "^4.0.1",
     "mssql": "5.1.0",
-    "rimraf": "^2.6.3"
+    "rimraf": "^2.6.3",
+    "start-server-and-test": "^1.10.6"
   },
   "author": "Yirga",
   "license": "ISC",
   "dependencies": {
     "@applitools/eyes-cypress": "^3.8.18",
+    "JSONStream": "^1.3.5",
     "cypress-downloadfile": "^1.0.1",
     "mssql": "^5.1.0",
     "mysql": "^2.17.1"

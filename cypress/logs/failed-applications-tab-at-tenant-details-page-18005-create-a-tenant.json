@@ -1,0 +1,11 @@
+{
+  "specName": "FodApplicationsTabTenantsDetailsPageTest.spec.js",
+  "title": "Create a tenant",
+  "suiteName": "Applications tab at tenant details page (18005)",
+  "testName": "Applications tab at tenant details page (18005) Create a tenant",
+  "testError": "cy.visit() failed trying to load:\n\nhttp://fodqa11-iis1/Login\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ETIMEDOUT 16.103.234.205:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThe stack trace for this error is:\n\nError: connect ETIMEDOUT 16.103.234.205:80\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1056:14)\n",
+  "testCommands": [
+    "visit http://fodqa11-iis1/Login"
+  ],
+  "screenshot": "create-a-tenant-failed.png"
+}

@@ -11,7 +11,7 @@ describe('POC for Task', () => {
     });
 
 
-    it('Creat tenant', () => {
+    it.skip('Creat tenant', () => {
 
         cy.LoginToAdminSite("zeusadmin", "Spi!pass007^");
         cy.CreateTenants();
@@ -19,7 +19,7 @@ describe('POC for Task', () => {
     })
 
 
-    it.skip('Create application', () => {
+    it('Create application', () => {
         cy.visit(Cypress.env("tenantSite"))
         cy.get('#loginEmail').type('AUTO-TAM')
         cy.get('#loginPassword').type('Spi!pass007^')
@@ -30,7 +30,6 @@ describe('POC for Task', () => {
 
             cy.get('#SelectedValue').should('be.visible').select(tenant.tenantId)
             cy.get('input[type=submit][value=OK]').click()
-
 
         })
 

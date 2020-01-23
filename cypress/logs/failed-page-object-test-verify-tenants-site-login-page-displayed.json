@@ -1,0 +1,19 @@
+{
+  "specName": "FodTenantLogInPageTest.spec.js",
+  "title": "Verify Tenants site login page displayed",
+  "suiteName": "page object test",
+  "testName": "page object test Verify Tenants site login page displayed",
+  "testError": "Timed out retrying: expected 'https://software.microfocus.com/en-us/software/application-security' to include 'solutions/application-security'",
+  "testCommands": [
+    "visit https://fodqa11-iis2/login",
+    "get .plus_art > object",
+    "assert expected **<object>** to exist in the DOM",
+    "get #mf-logo",
+    "assert expected **<object#mf-logo>** to exist in the DOM",
+    "get .btn-link",
+    "assert expected **<a.btn.btn-link.navbar-btn>** to exist in the DOM",
+    "assert expected **<a.btn.btn-link.navbar-btn>** to have attribute **href**",
+    "assert expected **https://software.microfocus.com/en-us/software/application-security** to include **solutions/application-security**"
+  ],
+  "screenshot": "verify-tenants-site-login-page-displayed-failed.png"
+}

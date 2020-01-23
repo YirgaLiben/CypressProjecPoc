@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-12-30T15:02:18.143Z",
+    "end": "2019-12-30T15:04:43.749Z",
+    "duration": 145606,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5226f84e-17b7-43dc-9f21-63bc440455e8",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6636f8d0-5287-4dbb-ac96-0a7e8b677270",
+          "title": "App Summary and Attributes Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Creat a tenants",
+              "fullTitle": "App Summary and Attributes Test Creat a tenants",
+              "timedOut": null,
+              "duration": 20662,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.loginToAdminSite(\"zeusadmin\", \"Spi!pass007^\");\ntenantsPage.navigateToTenantsPage();\ntenantsPage.createTenant(tenantId);\nCypress.currentTest.retries(1);",
+              "err": {},
+              "uuid": "6900ba48-ca3b-4e0d-8b0c-447f6fb9186a",
+              "parentUUID": "6636f8d0-5287-4dbb-ac96-0a7e8b677270",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create an application and verify tenants  App summary page",
+              "fullTitle": "App Summary and Attributes Test Create an application and verify tenants  App summary page",
+              "timedOut": null,
+              "duration": 36336,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.loginToTenantSite('AUTO-TAM', 'Spi!pass007^', 'tenantId');\napplicationPage.createApplication(appName, 'High', 'Web / Thick-Client', 'Production');\napplicationPage.selectCreatedApplication(appName);\nsettingsPage.clickSettingTab();\nsettingsPage.verifyApplicationSummaryPageDisplayed();\nsettingsPage.verifyApplicationSummaryTabDisplayed();\nsettingsPage.verifyApplicationSaveValidation();\nsettingsPage.verifyApplicationNameDisplayed(\"\".concat(appName));\nsettingsPage.verifyBusinessCriticalitySelected('High');\nsettingsPage.verifyApplicationTypeDisplayed('Web / Thick-Client');\nsettingsPage.verifyApplicationDescriptionDisplayed('The most epic App ever');\nsettingsPage.verifyEmailValidation();\nsettingsPage.enterAndVerifyAdditionalEmails('Yahoo@gmail.com;test@test.com');\nsettingsPage.verifyAppDeletionPopUp();\nsettingsPage.updateApplicationSummaryAndVerifyUpdateSaved();\nsettingsPage.verifyApplicationDeleted(appName);\nCypress.currentTest.retries(1);",
+              "err": {},
+              "uuid": "b4cad501-dbd3-4e6d-8906-3ed45298e252",
+              "parentUUID": "6636f8d0-5287-4dbb-ac96-0a7e8b677270",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create an app  and verify application attributes page",
+              "fullTitle": "App Summary and Attributes Test Create an app  and verify application attributes page",
+              "timedOut": null,
+              "duration": 79998,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.loginToTenantSite('AUTO-TAM', 'Spi!pass007^', 'tenantId');\napplicationPage.createApplication(appName, 'High', 'Web / Thick-Client', 'Production');\nattributesPage.navigateToSettingsAttributesPage();\nattributesPage.addAttributes('CustomAttribute1', 'Text', 'isRequired');\nattributesPage.addAttributes('CustomPicklist', 'Picklist', 'notRequired');\nattributesPage.addAttributes('CustomAttribute3', 'Boolean', 'isRequired');\nattributesPage.addAttributes('CustomAttributeDate', 'Date', 'notRequired');\nattributesPage.addAttributes('CustomAttributeUser', 'User', 'notRequired');\napplicationPage.navigateToApplicationsPage();\napplicationPage.searchForCreatedApplication(appName);\nsettingsPage.clickSettingTab();\nsettingsPage.clickApplicationAttributesTab();\nsettingsPage.verifyAddedAttributesDisplayInAppAttributesPage();\nsettingsPage.verifyApplicationAttributesSaveValidation();\nsettingsPage.createApplicationAndVerifyAttributes();",
+              "err": {},
+              "uuid": "22e7c99a-3f87-4111-ba9d-633f4e692a2e",
+              "parentUUID": "6636f8d0-5287-4dbb-ac96-0a7e8b677270",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6900ba48-ca3b-4e0d-8b0c-447f6fb9186a",
+            "b4cad501-dbd3-4e6d-8906-3ed45298e252",
+            "22e7c99a-3f87-4111-ba9d-633f4e692a2e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 136996,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.0.1"
+    }
+  }
+}

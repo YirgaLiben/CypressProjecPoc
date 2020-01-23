@@ -2,6 +2,9 @@ import BasePage from '../../BasePage'
 import LoginPage from '../../tenantSite/LogInPage'
 
 
+//const requiredExample = require('../../../fixtures/TenantId.json')
+
+
 class TenantsPage extends BasePage {
 
     verifyTenantsPageDisplayed()
@@ -65,7 +68,9 @@ class TenantsPage extends BasePage {
       
         cy.get('[data-role="searchText"]').type('AUTO-TAM{enter}')
         cy.get('[data-user-name="AUTO-TAM"] > .action-cell > [data-action="edit-user"]').click()
-        cy.get('select[name="countryid"]').select('Albania')
+        //cy.get('select[name="countryid"]').select('Albania')
+        cy.get('#modalAddUser').click()
+        cy.get('#tenantSearch').focus()
         cy.get('#tenantSearch').type(tenantId)
         cy.get('div#selectedTenants > table > thead > tr > th > label > span').click()
         cy.get('[data-action="save-user"]').click()
@@ -85,12 +90,24 @@ class TenantsPage extends BasePage {
 
     getTenantId()
     {
-        cy.readFile('cypress/fixtures/TenantId.json').then((tenant) =>{
+      
+        cy.readFile('cypress/fixtures/TenantId.json').then(($tenant) =>{
             
-            return tenant.tenantId
+            return  $tenant.tenantId
 
         })
+
        
+    }
+
+    searchTenantsAndNavigateToDetailsPage(tenantId)
+    {
+     
+        this.navigateToTenantsPage()
+        cy.get('[data-role="searchText"]').type(`${tenantId}{enter}`)
+        cy.get('table').find('tr').contains(`${tenantId}`).click()
+
+
     }
 
 }

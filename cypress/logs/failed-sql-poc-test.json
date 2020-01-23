@@ -1,0 +1,9 @@
+{
+  "specName": "FodsqlPoc.spec.js",
+  "title": "test",
+  "suiteName": "sql poc",
+  "testName": "sql poc test",
+  "testError": "fs.createReadStream is not a function",
+  "testCommands": [],
+  "screenshot": "test-failed.png"
+}
