@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-02-19T16:41:58.968Z",
+    "end": "2020-02-19T16:42:28.180Z",
+    "duration": 29212,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1f00aecd-d0ec-42a2-9eae-0b41ae04391d",
+      "title": "",
+      "fullFile": "cypress\\integration\\FoD\\GetAccessToken.spec.js",
+      "file": "cypress\\integration\\FoD\\GetAccessToken.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f57b709c-f4d1-44d5-a987-bc7371e85811",
+          "title": "Get access token",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get access token",
+              "fullTitle": "Get access token Get access token",
+              "timedOut": null,
+              "duration": 25382,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/FoD\\\\GetAccessToken.spec.js/Get access token--Get access token(failed).png\"",
+              "code": "cy.request({\n  method: 'POST',\n  url: 'http://fodqa11-iis3/oauth/token',\n  form: true,\n  body: {\n    grant_type: 'client_credentials',\n    scope: 'api-tenant',\n    client_id: '08f144a6-2823-46d3-856d-15a5db8a5320',\n    client_secret: 'aG14NGpAV1gyWjJ0WnBzeiZGZy40b00zZmxodEJV0'\n  }\n}).then(function (response) {\n  cy.log(response.body);\n  assert.equal(response.status, 200);\n  expect(response.body).to.not.be[\"null\"];\n  cy.log(response.body.expires_in);\n  window.localStorage.setItem('access_token', response.body.access_token);\n  var access_token = response.body.access_token;\n  cy.writeFile('cypress/fixtures/access_token.json', {\n    accessToken: access_token\n  });\n});",
+              "err": {
+                "message": "CypressError: cy.request() timed out waiting 25000ms for a response from your server.\n\nThe request we sent was:\n\nMethod: POST\nURL: http://fodqa11-iis3/oauth/token\n\nNo response was received within the timeout.",
+                "estack": "CypressError: cy.request() timed out waiting 25000ms for a response from your server.\n\nThe request we sent was:\n\nMethod: POST\nURL: http://fodqa11-iis3/oauth/token\n\nNo response was received within the timeout.\n    at Object.cypressErr (http://localhost:5354/__cypress/runner/cypress_runner.js:102176:11)\n    at Object.throwErr (http://localhost:5354/__cypress/runner/cypress_runner.js:102128:18)\n    at Object.throwErrByPath (http://localhost:5354/__cypress/runner/cypress_runner.js:102163:17)\n    at http://localhost:5354/__cypress/runner/cypress_runner.js:88380:23\n    at tryCatcher (http://localhost:5354/__cypress/runner/cypress_runner.js:136088:23)\n    at http://localhost:5354/__cypress/runner/cypress_runner.js:131229:41\n    at tryCatcher (http://localhost:5354/__cypress/runner/cypress_runner.js:136088:23)\n    at Promise._settlePromiseFromHandler (http://localhost:5354/__cypress/runner/cypress_runner.js:134024:31)\n    at Promise._settlePromise (http://localhost:5354/__cypress/runner/cypress_runner.js:134081:18)\n    at Promise._settlePromise0 (http://localhost:5354/__cypress/runner/cypress_runner.js:134126:10)\n    at Promise._settlePromises (http://localhost:5354/__cypress/runner/cypress_runner.js:134201:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:5354/__cypress/runner/cypress_runner.js:130813:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:5354/__cypress/runner/cypress_runner.js:130823:10)\n    at Async.drainQueues (http://localhost:5354/__cypress/runner/cypress_runner.js:130697:14)",
+                "diff": null
+              },
+              "uuid": "769e3188-c126-49e6-a8fb-1b6e8e5e482d",
+              "parentUUID": "f57b709c-f4d1-44d5-a987-bc7371e85811",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "769e3188-c126-49e6-a8fb-1b6e8e5e482d"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 25382,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.1.0"
+    }
+  }
+}

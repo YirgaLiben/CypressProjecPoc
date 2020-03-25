@@ -1,0 +1,92 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-02-19T16:43:37.838Z",
+    "end": "2020-02-19T16:43:41.749Z",
+    "duration": 3911,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5dfad859-13b5-49b7-92c9-08dda1d6498a",
+      "title": "",
+      "fullFile": "cypress\\integration\\FoD\\sql.js",
+      "file": "cypress\\integration\\FoD\\sql.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "An uncaught error was detected outside of a test",
+          "fullTitle": " An uncaught error was detected outside of a test",
+          "timedOut": null,
+          "duration": 370,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": "\"assets/FoD\\\\sql.js/--An uncaught error was detected outside of a test(failed).png\"",
+          "code": "throw err;",
+          "err": {
+            "message": "Uncaught TypeError: Cannot read property 'prototype' of undefined\n\nThis error originated from your test code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.",
+            "estack": "Uncaught TypeError: Cannot read property 'prototype' of undefined\n\nThis error originated from your test code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.\n",
+            "diff": null
+          },
+          "uuid": "bc75160e-0293-472d-af66-5005e6476239",
+          "parentUUID": "5dfad859-13b5-49b7-92c9-08dda1d6498a",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [
+        "bc75160e-0293-472d-af66-5005e6476239"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 370,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.1.0"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<head>
+    <title>Page Title</title>
+    <script>
+        $(function () {
+            $('.user-submit').on('click', function () {
+                var test = $('.user-number').val();
+                console.log(test)
+                var myInterval  = setInterval(function(){console.log(new Date());},1000);
+                if (test === 'kis') {
+                    $('.message').text('You are right!');
+                } else {
+                    $('.message').text('Sorry, that is not the number 2.');
+                }
+            });
+        });
+
+
+    </script>
+</head>
+
+<body>
+    <h1>Super Fun Game Time</h1>
+
+    <p>Enter the number 2 into the field below and press "Submit."</p>
+
+    <input class="user-number" type="text">
+
+    <button class="user-submit">Submit</button>
+
+    <div class="message"></div>
+</body>
+
+</html>

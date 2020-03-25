@@ -1,0 +1,11 @@
+{
+  "specName": "FodRepositoriesTabTenantsDetailsPageTest.spec.js",
+  "title": "Verify Repositories page functionality",
+  "suiteName": "Repositories tab at Tenant Details page Test",
+  "testName": "Repositories tab at Tenant Details page Test Verify Repositories page functionality",
+  "testError": "Timed out after waiting '25000ms' for your remote page to load.\n\nYour page did not fire its 'load' event within '25000ms'.\n\nYou can try increasing the 'pageLoadTimeout' value in 'cypress.json' to wait longer.\n\nBrowsers will not fire the 'load' event until all stylesheets and scripts are done downloading.\n\nWhen this 'load' event occurs, Cypress will continue running commands.",
+  "testCommands": [
+    "visit http://fodqa11-iis1/Login"
+  ],
+  "screenshot": "verify-repositories-page-functionality-failed.png"
+}

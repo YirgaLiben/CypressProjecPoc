@@ -1,0 +1,157 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 0,
+    "pending": 0,
+    "failures": 3,
+    "start": "2020-02-19T16:31:35.252Z",
+    "end": "2020-02-19T16:33:51.078Z",
+    "duration": 135826,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "765972d0-bae8-44e6-8972-54fe86de7a80",
+      "title": "",
+      "fullFile": "cypress\\integration\\FoD\\FodApplicationsTabTenantsDetailsPageTest.spec.js",
+      "file": "cypress\\integration\\FoD\\FodApplicationsTabTenantsDetailsPageTest.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e14b8869-09c0-400b-8aba-b3b47587e62e",
+          "title": "Applications tab at tenant details page (18005)",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create a tenant",
+              "fullTitle": "Applications tab at tenant details page (18005) Create a tenant",
+              "timedOut": null,
+              "duration": 25335,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/FoD\\\\FodApplicationsTabTenantsDetailsPageTest.spec.js/Applications tab at tenant details page (18005)--Create a tenant(failed).png\"",
+              "code": "var tenantId = 'AUTO-TENANT1-' + Date.now();\nloginPage.loginToAdminSite(\"zeusadmin\", \"Spi!pass007^\");\ntenantsPage.navigateToTenantsPage();\ntenantsPage.createTenant(tenantId);\nCypress.currentTest.retries(1);",
+              "err": {
+                "message": "CypressError: Timed out after waiting '25000ms' for your remote page to load.\n\nYour page did not fire its 'load' event within '25000ms'.\n\nYou can try increasing the 'pageLoadTimeout' value in 'cypress.json' to wait longer.\n\nBrowsers will not fire the 'load' event until all stylesheets and scripts are done downloading.\n\nWhen this 'load' event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting '25000ms' for your remote page to load.\n\nYour page did not fire its 'load' event within '25000ms'.\n\nYou can try increasing the 'pageLoadTimeout' value in 'cypress.json' to wait longer.\n\nBrowsers will not fire the 'load' event until all stylesheets and scripts are done downloading.\n\nWhen this 'load' event occurs, Cypress will continue running commands.\n    at Object.cypressErr (http://localhost:5354/__cypress/runner/cypress_runner.js:102176:11)\n    at Object.throwErr (http://localhost:5354/__cypress/runner/cypress_runner.js:102128:18)\n    at Object.throwErrByPath (http://localhost:5354/__cypress/runner/cypress_runner.js:102163:17)\n    at timedOutWaitingForPageLoad (http://localhost:5354/__cypress/runner/cypress_runner.js:86578:17)\n    at http://localhost:5354/__cypress/runner/cypress_runner.js:87361:16\n    at tryCatcher (http://localhost:5354/__cypress/runner/cypress_runner.js:136088:23)\n    at http://localhost:5354/__cypress/runner/cypress_runner.js:131229:41\n    at tryCatcher (http://localhost:5354/__cypress/runner/cypress_runner.js:136088:23)\n    at Promise._settlePromiseFromHandler (http://localhost:5354/__cypress/runner/cypress_runner.js:134024:31)\n    at Promise._settlePromise (http://localhost:5354/__cypress/runner/cypress_runner.js:134081:18)\n    at Promise._settlePromise0 (http://localhost:5354/__cypress/runner/cypress_runner.js:134126:10)\n    at Promise._settlePromises (http://localhost:5354/__cypress/runner/cypress_runner.js:134201:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:5354/__cypress/runner/cypress_runner.js:130813:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:5354/__cypress/runner/cypress_runner.js:130823:10)\n    at Async.drainQueues (http://localhost:5354/__cypress/runner/cypress_runner.js:130697:14)",
+                "diff": null
+              },
+              "uuid": "6b9b996c-a6ad-4612-9486-6a55b87faf93",
+              "parentUUID": "e14b8869-09c0-400b-8aba-b3b47587e62e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "create an application",
+              "fullTitle": "Applications tab at tenant details page (18005) create an application",
+              "timedOut": null,
+              "duration": 25353,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/FoD\\\\FodApplicationsTabTenantsDetailsPageTest.spec.js/Applications tab at tenant details page (18005)--create an application(failed).png\"",
+              "code": "loginPage.loginToTenantSite('AUTO-TAM', 'Spi!pass007^', 'tenantId');\nappName.forEach(function (app) {\n  appPage.createApplication(app, 'High', 'Web / Thick-Client', 'Production');\n});\nCypress.currentTest.retries(1);",
+              "err": {
+                "message": "CypressError: Timed out after waiting '25000ms' for your remote page to load.\n\nYour page did not fire its 'load' event within '25000ms'.\n\nYou can try increasing the 'pageLoadTimeout' value in 'cypress.json' to wait longer.\n\nBrowsers will not fire the 'load' event until all stylesheets and scripts are done downloading.\n\nWhen this 'load' event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting '25000ms' for your remote page to load.\n\nYour page did not fire its 'load' event within '25000ms'.\n\nYou can try increasing the 'pageLoadTimeout' value in 'cypress.json' to wait longer.\n\nBrowsers will not fire the 'load' event until all stylesheets and scripts are done downloading.\n\nWhen this 'load' event occurs, Cypress will continue running commands.\n    at Object.cypressErr (http://localhost:5354/__cypress/runner/cypress_runner.js:102176:11)\n    at Object.throwErr (http://localhost:5354/__cypress/runner/cypress_runner.js:102128:18)\n    at Object.throwErrByPath (http://localhost:5354/__cypress/runner/cypress_runner.js:102163:17)\n    at timedOutWaitingForPageLoad (http://localhost:5354/__cypress/runner/cypress_runner.js:86578:17)\n    at http://localhost:5354/__cypress/runner/cypress_runner.js:87361:16\n    at tryCatcher (http://localhost:5354/__cypress/runner/cypress_runner.js:136088:23)\n    at http://localhost:5354/__cypress/runner/cypress_runner.js:131229:41\n    at tryCatcher (http://localhost:5354/__cypress/runner/cypress_runner.js:136088:23)\n    at Promise._settlePromiseFromHandler (http://localhost:5354/__cypress/runner/cypress_runner.js:134024:31)\n    at Promise._settlePromise (http://localhost:5354/__cypress/runner/cypress_runner.js:134081:18)\n    at Promise._settlePromise0 (http://localhost:5354/__cypress/runner/cypress_runner.js:134126:10)\n    at Promise._settlePromises (http://localhost:5354/__cypress/runner/cypress_runner.js:134201:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:5354/__cypress/runner/cypress_runner.js:130813:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:5354/__cypress/runner/cypress_runner.js:130823:10)\n    at Async.drainQueues (http://localhost:5354/__cypress/runner/cypress_runner.js:130697:14)",
+                "diff": null
+              },
+              "uuid": "cde3d59f-8ee9-4693-94ca-360d0c54d4cd",
+              "parentUUID": "e14b8869-09c0-400b-8aba-b3b47587e62e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Applications page at tenant details page displayed",
+              "fullTitle": "Applications tab at tenant details page (18005) Verify Applications page at tenant details page displayed",
+              "timedOut": null,
+              "duration": 25367,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/FoD\\\\FodApplicationsTabTenantsDetailsPageTest.spec.js/Applications tab at tenant details page (18005)--Verify Applications page at tenant details page displayed(failed).png\"",
+              "code": "loginPage.loginToAdminSite(\"zeusadmin\", \"Spi!pass007^\");\ntenantsPage.navigateToTenantsPage();\ncy.readFile('cypress/fixtures/TenantId.json').then(function (tenant) {\n  tenantsPage.searchTenantsAndNavigateToDetailsPage(tenant.tenantId);\n  applicationsPage.clickApplicationsTab();\n  applicationsPage.isTheSelectedTenantDisplayedOnThePage(tenant.tenantId);\n});\napplicationsPage.isApplicationTitleDisplayed();\napplicationsPage.isApplicationsTableDisplayed();\napplicationsPage.isApplicationsIDColumnDisplayed();\napplicationsPage.isNameColumnDisplayed();\napplicationsPage.isModifiedDateColumnDisplayed();\napplicationsPage.isDeletedColumnDisplayed();\napplicationsPage.isPagingSectionDisplayed();\napplicationsPage.isReleaseButtonEnabled();\napplicationsPage.isAdditionalDataLinkDisplayed();\napplicationsPage.isNameColumnSortable();\napplicationsPage.verifyTableDisplayedIsSorted();\napplicationsPage.isSearchSectionDisplayed();\nappName.forEach(function (app) {\n  applicationsPage.verifySearchFunction(app);\n});",
+              "err": {
+                "message": "CypressError: Timed out after waiting '25000ms' for your remote page to load.\n\nYour page did not fire its 'load' event within '25000ms'.\n\nYou can try increasing the 'pageLoadTimeout' value in 'cypress.json' to wait longer.\n\nBrowsers will not fire the 'load' event until all stylesheets and scripts are done downloading.\n\nWhen this 'load' event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting '25000ms' for your remote page to load.\n\nYour page did not fire its 'load' event within '25000ms'.\n\nYou can try increasing the 'pageLoadTimeout' value in 'cypress.json' to wait longer.\n\nBrowsers will not fire the 'load' event until all stylesheets and scripts are done downloading.\n\nWhen this 'load' event occurs, Cypress will continue running commands.\n    at Object.cypressErr (http://localhost:5354/__cypress/runner/cypress_runner.js:102176:11)\n    at Object.throwErr (http://localhost:5354/__cypress/runner/cypress_runner.js:102128:18)\n    at Object.throwErrByPath (http://localhost:5354/__cypress/runner/cypress_runner.js:102163:17)\n    at timedOutWaitingForPageLoad (http://localhost:5354/__cypress/runner/cypress_runner.js:86578:17)\n    at http://localhost:5354/__cypress/runner/cypress_runner.js:87361:16\n    at tryCatcher (http://localhost:5354/__cypress/runner/cypress_runner.js:136088:23)\n    at http://localhost:5354/__cypress/runner/cypress_runner.js:131229:41\n    at tryCatcher (http://localhost:5354/__cypress/runner/cypress_runner.js:136088:23)\n    at Promise._settlePromiseFromHandler (http://localhost:5354/__cypress/runner/cypress_runner.js:134024:31)\n    at Promise._settlePromise (http://localhost:5354/__cypress/runner/cypress_runner.js:134081:18)\n    at Promise._settlePromise0 (http://localhost:5354/__cypress/runner/cypress_runner.js:134126:10)\n    at Promise._settlePromises (http://localhost:5354/__cypress/runner/cypress_runner.js:134201:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:5354/__cypress/runner/cypress_runner.js:130813:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:5354/__cypress/runner/cypress_runner.js:130823:10)\n    at Async.drainQueues (http://localhost:5354/__cypress/runner/cypress_runner.js:130697:14)",
+                "diff": null
+              },
+              "uuid": "8b9fa5b9-5bcd-45c9-bf35-52793001e1e3",
+              "parentUUID": "e14b8869-09c0-400b-8aba-b3b47587e62e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "6b9b996c-a6ad-4612-9486-6a55b87faf93",
+            "cde3d59f-8ee9-4693-94ca-360d0c54d4cd",
+            "8b9fa5b9-5bcd-45c9-bf35-52793001e1e3"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 76055,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.1.0"
+    }
+  }
+}

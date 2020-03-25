@@ -3,10 +3,10 @@
   "title": "Visual test adding a tenants ",
   "suiteName": "Applitools visual validation POC",
   "testName": "Applitools visual validation POC Visual test adding a tenants ",
-  "testError": "Request failed with status code 403 (Forbidden)\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: 'Applitools visual validatio...'",
+  "testError": "Timed out after waiting '25000ms' for your remote page to load.\n\nYour page did not fire its 'load' event within '25000ms'.\n\nYou can try increasing the 'pageLoadTimeout' value in 'cypress.json' to wait longer.\n\nBrowsers will not fire the 'load' event until all stylesheets and scripts are done downloading.\n\nWhen this 'load' event occurs, Cypress will continue running commands.",
   "testCommands": [
     "Eyes: open Object{3}",
-    "then {timeout: 15000}, function(){}"
+    "visit http://fodqa11-iis1/Login"
   ],
   "screenshot": "visual-test-adding-a-tenants-failed.png"
 }

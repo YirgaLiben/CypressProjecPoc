@@ -1,0 +1,11 @@
+{
+  "specName": "GetAccessToken.spec.js",
+  "title": "Get access token",
+  "suiteName": "Get access token",
+  "testName": "Get access token Get access token",
+  "testError": "cy.request() timed out waiting 25000ms for a response from your server.\n\nThe request we sent was:\n\nMethod: POST\nURL: http://fodqa11-iis3/oauth/token\n\nNo response was received within the timeout.",
+  "testCommands": [
+    "request "
+  ],
+  "screenshot": "get-access-token-failed.png"
+}

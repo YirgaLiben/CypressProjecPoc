@@ -1,0 +1,11 @@
+{
+  "specName": "FodTenantLogInPageTest.spec.js",
+  "title": "Choose Tenant Page should Display for valid Tenant Users",
+  "suiteName": "Tenant Site Login Page Test",
+  "testName": "Tenant Site Login Page Test Choose Tenant Page should Display for valid Tenant Users",
+  "testError": "Timed out retrying: Expected to find element: '#loginEmail', but never found it.",
+  "testCommands": [
+    "get #loginEmail"
+  ],
+  "screenshot": "choose-tenant-page-should-display-for-valid-tenant-users-failed.png"
+}

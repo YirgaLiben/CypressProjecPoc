@@ -19,6 +19,8 @@ describe('Applitools visual validation POC', () => {
         cy.get('#secLeadLastName').type('AUTO-SL1')
         cy.get('[data-action="next"]').click()
         cy.eyesCheckWindow('Tenant Entitlement info')
+
+        
         
         cy.get('#tenantName').type(tenantId)
         cy.get('#tenantCode').type(tenantId)

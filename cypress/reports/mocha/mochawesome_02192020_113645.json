@@ -1,0 +1,131 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 1,
+    "failures": 1,
+    "start": "2020-02-19T16:36:16.483Z",
+    "end": "2020-02-19T16:36:45.788Z",
+    "duration": 29305,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 50,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "46cf7239-7965-40d0-a8c7-e6175a362794",
+      "title": "",
+      "fullFile": "cypress\\integration\\FoD\\FoDPoc.spec.js",
+      "file": "cypress\\integration\\FoD\\FoDPoc.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "475d8a1f-b02d-461f-bda5-34c1eb6d4b5e",
+          "title": "POC for Task",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Creat tenant",
+              "fullTitle": "POC for Task Creat tenant",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "96850edd-9aa3-4a74-953f-8833971175f1",
+              "parentUUID": "475d8a1f-b02d-461f-bda5-34c1eb6d4b5e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create application",
+              "fullTitle": "POC for Task Create application",
+              "timedOut": null,
+              "duration": 25325,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/FoD\\\\FoDPoc.spec.js/POC for Task--Create application(failed).png\"",
+              "code": "cy.visit(Cypress.env(\"tenantSite\"));\ncy.get('#loginEmail').type('AUTO-TAM');\ncy.get('#loginPassword').type('Spi!pass007^');\ncy.get('#loginTenantID').type('tenantId');\ncy.get('#btnLogin').click();\ncy.readFile('cypress/fixtures/TenantId.json').then(function (tenant) {\n  cy.get('#SelectedValue').should('be.visible').select(tenant.tenantId);\n  cy.get('input[type=submit][value=OK]').click();\n});\ncy.get('[data-action=\"add-application\"]').should('be.visible').click();\ncy.get('#createApplicationName').type(appName);\ncy.get('#createApplicationBusinessCriticality').select('High');\ncy.get('#createApplicationApplicationType').select('Web / Thick-Client');\ncy.get('#createApplicationDescription').type('The most epic App ever');\ncy.get('[data-action=\"next\"]').click();\ncy.get('#createApplicationReleaseName').type('APP-RELEASE');\ncy.get('#createApplicationReleaseSDLC').select('Production');\ncy.get('#createApplicationReleaseDescription').type('Auto App Release');\ncy.get('[data-action=\"next\"]').click();\ncy.get('[data-action=\"save\"]').click();\ncy.get(':nth-child(4) > .nav-tab > :nth-child(1) > .nav-tab-icon > .ff').click({\n  force: true\n});\ncy.get(':nth-child(4) > .nav-tab > :nth-child(1) > .nav-tab-icon > .ff').should('be.visible').click();\ncy.get('.section-right > .dropdown > .btn').click();\ncy.get('.section-right > .dropdown > .dropdown-menu > :nth-child(1) > a').click();\ncy.get(\"#fprscanUploadBrowse\").click();\ncy.get(\"#fprscanUploadBrowse\").click({\n  force: true\n});\ncy.uploadFile('static.java.fpr', '#fprscanUploadBrowse > input[type=file]', 'application/fpr');\ncy.get('#fprscanUpload').click();\ncy.get(':nth-child(2) > .nav-tab > :nth-child(1) > .nav-tab-icon > .ff').should('be.visible').click();\ncy.reload();\ncy.get(':nth-child(4) > .nav-tab > :nth-child(1) > .nav-tab-icon > .ff').should('be.visible').click();\ncy.reload();\ncy.get(':nth-child(2) > .nav-tab > :nth-child(1) > .nav-tab-icon > .ff').should('be.visible').click();\ncy.reload();\ncy.get(':nth-child(1) > .scan-status-icon > .scan-status > a > div').then(function ($div) {\n  var found = false;\n  var count = 0;\n  while (!found) {\n    var scanStatus1 = $div.text();\n    if (scanStatus1 !== \"Completed\") {\n      cy.reload();\n      found = false;\n      count = count + 1;\n      cy.wait(1000);\n      scanStatus1 = $div.text();\n      if (count === 17) {\n        cy.log(scanStatus1);\n        found = true;\n      }\n    } else {\n      found = true;\n      cy.get(':nth-child(1) > .scan-status-icon > .scan-status > a > div').should('have.text', \"Completed\");\n    }\n  }\n}); // cy.get(':nth-child(1) > .scan-status-icon > .scan-status > a > div').then(($body) => {\n//     if ($body.text().includes('Completed')) {\n//         cy.log($body.text())\n//         cy.get(':nth-child(1) > .scan-status-icon > .scan-status > a > div').should('have.text', \"Completed\")\n//     } else {\n//         while (!($body.text().includes('Completed'))) {\n//             cy.reload()\n//             if ($body.text().includes('Completed')) {\n//                 cy.log($body.text())\n//                 cy.get(':nth-child(1) > .scan-status-icon > .scan-status > a > div').should('have.text', \"Completed\")\n//                 break;\n//             }\n//             else \n//             {\n//                 if(count < 15)\n//                 count++;\n//                 cy.reload()\n//                 cy.log($body.text())\n//             }\n//         }\n//     }\n// })\n//  cy.get(':nth-child(1) > .scan-status-icon > .scan-status > a > div').should('have.text',\"Completed\")\n// var getScanStatus = Cypress.$('.scan-status-icon > .scan-status > a > div').text();\n//cy.get(':nth-child(1) > .scan-status-icon > .scan-status > a > div').invoke('text').then((getScanStatus) =>{\n// cy.waitUntil(() =>  cy.get(':nth-child(1) > .scan-status-icon > .scan-status > a > div').then((getScanStatus) =>\n//     getScanStatus == 'Completed')\n// , {\n//     errorMsg: 'This is a custom error message', // overrides the default error message\n//     timeout: 6000, // waits up to 2000 ms, default to 5000\n//     interval: 500 // performs the check every 500 ms, default to 200\n//   })\n// // let found = false\n// let count = 0\n// while (!found) {\n//     if (getScanStatus !== \"Completed\") {\n//         cy.reload()\n//         cy.log(getScanStatus)\n//         found = false\n//         count = count + 1\n//         cy.wait(1000)\n//         if (count === 10) {\n//             found = true;\n//             cy.log(\"Scan still in progress after 10sec wait\")\n//         }\n//     }\n//     else {\n//         found = true;\n//         cy.get(':nth-child(1) > .scan-status-icon > .scan-status > a > div').should('have.text',\"Completed\")\n//     }\n// }\n// })\ncy.get(':nth-child(4) > .nav-tab > :nth-child(1) > .nav-tab-icon > .ff').should('be.visible').click();\ncy.reload();\ncy.get(':nth-child(2) > .nav-tab > :nth-child(1) > .nav-tab-icon > .ff').should('be.visible').click();\ncy.reload();\ncy.reload();\ncy.reload(); // cy.get(':nth-child(1) > .scan-status-icon > .scan-status > a > div').should('have.text',\"Completed\")\n//    // cy.get(':nth-child(1) > .scan-status-icon > .scan-status > a > div').should('contain','Completed')\n//     cy.get(':nth-child(4) > .nav-tab > :nth-child(1) > .nav-tab-icon > .ff').should('be.visible').click();\n//     cy.get('tbody > tr > :nth-child(4)').invoke('text').then((text) => {\n//         expect(text).to.contain('Completed')\n//     })\n//     const scanpageIssuecount  = Cypress.$('.severity-badge-total').text()\n//     cy.log(scanpageIssuecount)\n//     cy.get(':nth-child(3) > .nav-tab > :nth-child(1) > .nav-tab-icon > .ff').click()\n//     const issuepageIssuesCount = Cypress.$(':nth-child(5) > a > .badge').text()  //.category-badge-all\n//     cy.log(issuepageIssuesCount)",
+              "err": {
+                "message": "CypressError: Timed out after waiting '25000ms' for your remote page to load.\n\nYour page did not fire its 'load' event within '25000ms'.\n\nYou can try increasing the 'pageLoadTimeout' value in 'cypress.json' to wait longer.\n\nBrowsers will not fire the 'load' event until all stylesheets and scripts are done downloading.\n\nWhen this 'load' event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting '25000ms' for your remote page to load.\n\nYour page did not fire its 'load' event within '25000ms'.\n\nYou can try increasing the 'pageLoadTimeout' value in 'cypress.json' to wait longer.\n\nBrowsers will not fire the 'load' event until all stylesheets and scripts are done downloading.\n\nWhen this 'load' event occurs, Cypress will continue running commands.\n    at Object.cypressErr (http://localhost:5354/__cypress/runner/cypress_runner.js:102176:11)\n    at Object.throwErr (http://localhost:5354/__cypress/runner/cypress_runner.js:102128:18)\n    at Object.throwErrByPath (http://localhost:5354/__cypress/runner/cypress_runner.js:102163:17)\n    at timedOutWaitingForPageLoad (http://localhost:5354/__cypress/runner/cypress_runner.js:86578:17)\n    at http://localhost:5354/__cypress/runner/cypress_runner.js:87361:16\n    at tryCatcher (http://localhost:5354/__cypress/runner/cypress_runner.js:136088:23)\n    at http://localhost:5354/__cypress/runner/cypress_runner.js:131229:41\n    at tryCatcher (http://localhost:5354/__cypress/runner/cypress_runner.js:136088:23)\n    at Promise._settlePromiseFromHandler (http://localhost:5354/__cypress/runner/cypress_runner.js:134024:31)\n    at Promise._settlePromise (http://localhost:5354/__cypress/runner/cypress_runner.js:134081:18)\n    at Promise._settlePromise0 (http://localhost:5354/__cypress/runner/cypress_runner.js:134126:10)\n    at Promise._settlePromises (http://localhost:5354/__cypress/runner/cypress_runner.js:134201:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:5354/__cypress/runner/cypress_runner.js:130813:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:5354/__cypress/runner/cypress_runner.js:130823:10)\n    at Async.drainQueues (http://localhost:5354/__cypress/runner/cypress_runner.js:130697:14)",
+                "diff": null
+              },
+              "uuid": "c9dd2a17-9a0f-44dc-b2a4-4b00c99e3861",
+              "parentUUID": "475d8a1f-b02d-461f-bda5-34c1eb6d4b5e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "c9dd2a17-9a0f-44dc-b2a4-4b00c99e3861"
+          ],
+          "pending": [
+            "96850edd-9aa3-4a74-953f-8833971175f1"
+          ],
+          "skipped": [],
+          "duration": 25325,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.1.0"
+    }
+  }
+}

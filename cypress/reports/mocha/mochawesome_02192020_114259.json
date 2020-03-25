@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-02-19T16:42:29.806Z",
+    "end": "2020-02-19T16:42:59.085Z",
+    "duration": 29279,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9ee1adad-60fb-4944-bdae-a399137adade",
+      "title": "",
+      "fullFile": "cypress\\integration\\FoD\\loginPageTestpoc.spec.js",
+      "file": "cypress\\integration\\FoD\\loginPageTestpoc.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a9fa8c3d-0d99-499c-83cf-954f732a7705",
+          "title": "Verify tenant login page - ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify tenant page displayed and check all the elements displayed  ",
+              "fullTitle": "Verify tenant login page -  Verify tenant page displayed and check all the elements displayed  ",
+              "timedOut": null,
+              "duration": 25416,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/FoD\\\\loginPageTestpoc.spec.js/Verify tenant login page - --Verify tenant page displayed and check all the elements displayed  (failed).png\"",
+              "code": "cy.visit(Cypress.env(\"tenantSite\"));\ncy.get('.plus_art > object').should('exist');\ncy.get('#mf-logo').should('exist');\ncy.get('.btn-link').should('exist').and('contain', 'Fortify Security Products');\ncy.get('#nav-collapse > .btn-primary').should('have.attr', 'href').and('include', 'https://software.microfocus.com/en-us/software/fortify-on-demand');\ncy.get('h1').should('contain', \"Fortify\");\ncy.get('h2').should('contain', 'on Demand');\ncy.get('#loginEmail').should('have.attr', 'placeholder', 'Username');\ncy.get('#loginPassword').should('have.attr', 'placeholder', 'Password');\ncy.get('#loginTenantID').should('have.attr', 'placeholder', 'Tenant');\ncy.get('.forgot-password > a').should('exist').and('contain', 'Forgot Your Password?');\ncy.get('.mf-logo > object').should('exist');\ncy.get('#btnLogin').should('exist').and('be.enabled');\ncy.get('#btnLogin').click();\ncy.get('#login-error > ul > li').should('exist').and('contain', 'Username is required.');\ncy.get('#loginEmail').type('fake');\ncy.get('#btnLogin').click();\ncy.get('#login-error > ul > li').should('exist').and('contain', 'Password is required.');\ncy.get('.catch_phrase').should('exist').and('contain', 'Find Fix');\ncy.xpath('//a[text()=\"Fortify\"]').should('have.attr', 'href', 'https://software.microfocus.com/en-us/software/fortify-on-demand').and(); // Cypress.currentTest.retries(2)",
+              "err": {
+                "message": "CypressError: Timed out after waiting '25000ms' for your remote page to load.\n\nYour page did not fire its 'load' event within '25000ms'.\n\nYou can try increasing the 'pageLoadTimeout' value in 'cypress.json' to wait longer.\n\nBrowsers will not fire the 'load' event until all stylesheets and scripts are done downloading.\n\nWhen this 'load' event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting '25000ms' for your remote page to load.\n\nYour page did not fire its 'load' event within '25000ms'.\n\nYou can try increasing the 'pageLoadTimeout' value in 'cypress.json' to wait longer.\n\nBrowsers will not fire the 'load' event until all stylesheets and scripts are done downloading.\n\nWhen this 'load' event occurs, Cypress will continue running commands.\n    at Object.cypressErr (http://localhost:5354/__cypress/runner/cypress_runner.js:102176:11)\n    at Object.throwErr (http://localhost:5354/__cypress/runner/cypress_runner.js:102128:18)\n    at Object.throwErrByPath (http://localhost:5354/__cypress/runner/cypress_runner.js:102163:17)\n    at timedOutWaitingForPageLoad (http://localhost:5354/__cypress/runner/cypress_runner.js:86578:17)\n    at http://localhost:5354/__cypress/runner/cypress_runner.js:87361:16\n    at tryCatcher (http://localhost:5354/__cypress/runner/cypress_runner.js:136088:23)\n    at http://localhost:5354/__cypress/runner/cypress_runner.js:131229:41\n    at tryCatcher (http://localhost:5354/__cypress/runner/cypress_runner.js:136088:23)\n    at Promise._settlePromiseFromHandler (http://localhost:5354/__cypress/runner/cypress_runner.js:134024:31)\n    at Promise._settlePromise (http://localhost:5354/__cypress/runner/cypress_runner.js:134081:18)\n    at Promise._settlePromise0 (http://localhost:5354/__cypress/runner/cypress_runner.js:134126:10)\n    at Promise._settlePromises (http://localhost:5354/__cypress/runner/cypress_runner.js:134201:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:5354/__cypress/runner/cypress_runner.js:130813:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:5354/__cypress/runner/cypress_runner.js:130823:10)\n    at Async.drainQueues (http://localhost:5354/__cypress/runner/cypress_runner.js:130697:14)",
+                "diff": null
+              },
+              "uuid": "a244424c-f21e-4af2-bb31-23bb6dfa12d0",
+              "parentUUID": "a9fa8c3d-0d99-499c-83cf-954f732a7705",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "a244424c-f21e-4af2-bb31-23bb6dfa12d0"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 25416,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.1.0"
+    }
+  }
+}

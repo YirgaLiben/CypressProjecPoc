@@ -1,0 +1,11 @@
+{
+  "specName": "FodTenantLogInPageTest.spec.js",
+  "title": "Verify Tenants site login page displayed",
+  "suiteName": "Tenant Site Login Page Test",
+  "testName": "Tenant Site Login Page Test Verify Tenants site login page displayed",
+  "testError": "Timed out after waiting '25000ms' for your remote page to load.\n\nYour page did not fire its 'load' event within '25000ms'.\n\nYou can try increasing the 'pageLoadTimeout' value in 'cypress.json' to wait longer.\n\nBrowsers will not fire the 'load' event until all stylesheets and scripts are done downloading.\n\nWhen this 'load' event occurs, Cypress will continue running commands.",
+  "testCommands": [
+    "visit https://fodqa11-iis2/login"
+  ],
+  "screenshot": "verify-tenants-site-login-page-displayed-failed.png"
+}

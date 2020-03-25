@@ -1,0 +1,131 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-02-19T16:37:19.341Z",
+    "end": "2020-02-19T16:37:45.257Z",
+    "duration": 25916,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "83466aba-03b1-40f3-b9bf-5d95e097363d",
+      "title": "",
+      "fullFile": "cypress\\integration\\FoD\\FodsqlPoc.spec.js",
+      "file": "cypress\\integration\\FoD\\FodsqlPoc.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "54762206-0566-4395-95ac-1451360d588c",
+          "title": "sql run poc",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "execute sql script and save the results in json format",
+              "fullTitle": "sql run poc execute sql script and save the results in json format",
+              "timedOut": null,
+              "duration": 22031,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/FoD\\\\FodsqlPoc.spec.js/sql run poc--execute sql script and save the results in json format(failed).png\"",
+              "code": "cy.exec('node sql2.js').then(function (result) {\n  cy.exec(\"echo \".concat(JSON.stringify(result.stdout), \" >cypress/fixtures/sql.json\"));\n  cy.log(result.stdout.JSON.stringify);\n});",
+              "err": {
+                "message": "TypeError: Cannot read property 'stringify' of undefined",
+                "estack": "TypeError: Cannot read property 'stringify' of undefined\n    at Context.<anonymous> (http://localhost:5354/__cypress/tests?p=cypress\\integration\\FoD\\FodsqlPoc.spec.js-705:12:33)",
+                "diff": null
+              },
+              "uuid": "e2855c4f-3f3d-424d-ab18-c9693c19d169",
+              "parentUUID": "54762206-0566-4395-95ac-1451360d588c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "read saved sql results",
+              "fullTitle": "sql run poc read saved sql results",
+              "timedOut": null,
+              "duration": 33,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.readFile('cypress/fixtures/sql.json').then(function (tenantID) {\n  cy.log(tenantID);\n});",
+              "err": {},
+              "uuid": "087945e2-e5a5-402c-89fb-2bdf31be1485",
+              "parentUUID": "54762206-0566-4395-95ac-1451360d588c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "087945e2-e5a5-402c-89fb-2bdf31be1485"
+          ],
+          "failures": [
+            "e2855c4f-3f3d-424d-ab18-c9693c19d169"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 22064,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.1.0"
+    }
+  }
+}

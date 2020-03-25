@@ -3,7 +3,9 @@
   "title": "Error message should display when trying to login without username",
   "suiteName": "Admin Site Login Page Test",
   "testName": "Admin Site Login Page Test Error message should display when trying to login without username",
-  "testError": "adminLoginPage.verifyErrorMessageisplayedWithoutEnteringUsername is not a function",
-  "testCommands": [],
+  "testError": "Timed out retrying: Expected to find element: '#loginEmail', but never found it.",
+  "testCommands": [
+    "get #loginEmail"
+  ],
   "screenshot": "error-message-should-display-when-trying-to-login-without-username-failed.png"
 }

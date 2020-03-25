@@ -1,0 +1,11 @@
+{
+  "specName": "FodapiTestPoc.spec.js",
+  "title": "Create application",
+  "suiteName": "sample api test",
+  "testName": "sample api test Create application",
+  "testError": "cy.request() timed out waiting 25000ms for a response from your server.\n\nThe request we sent was:\n\nMethod: POST\nURL: http://fodqa11-iis3/api/v3/applications\n\nNo response was received within the timeout.",
+  "testCommands": [
+    "request "
+  ],
+  "screenshot": "create-application-failed.png"
+}

@@ -1,0 +1,226 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 0,
+    "pending": 0,
+    "failures": 6,
+    "start": "2020-02-19T16:26:51.794Z",
+    "end": "2020-02-19T16:30:06.189Z",
+    "duration": 194395,
+    "testsRegistered": 6,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2bbc1186-e03e-47cf-8d33-56b1880c0ba7",
+      "title": "",
+      "fullFile": "cypress\\integration\\FoD\\FodAdminLogInPageTest.spec.js",
+      "file": "cypress\\integration\\FoD\\FodAdminLogInPageTest.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8b2a7f07-2440-4e4a-a0aa-11b0e10a0939",
+          "title": "Admin Site Login Page Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify admin site login page displayed",
+              "fullTitle": "Admin Site Login Page Test Verify admin site login page displayed",
+              "timedOut": null,
+              "duration": 25331,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/FoD\\\\FodAdminLogInPageTest.spec.js/Admin Site Login Page Test--Verify admin site login page displayed(failed).png\"",
+              "code": "adminLoginPage.verifyAdminLoginPageDisplayed();\nCypress.currentTest.retries(1);",
+              "err": {
+                "message": "CypressError: Timed out after waiting '25000ms' for your remote page to load.\n\nYour page did not fire its 'load' event within '25000ms'.\n\nYou can try increasing the 'pageLoadTimeout' value in 'cypress.json' to wait longer.\n\nBrowsers will not fire the 'load' event until all stylesheets and scripts are done downloading.\n\nWhen this 'load' event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting '25000ms' for your remote page to load.\n\nYour page did not fire its 'load' event within '25000ms'.\n\nYou can try increasing the 'pageLoadTimeout' value in 'cypress.json' to wait longer.\n\nBrowsers will not fire the 'load' event until all stylesheets and scripts are done downloading.\n\nWhen this 'load' event occurs, Cypress will continue running commands.\n    at Object.cypressErr (http://localhost:5354/__cypress/runner/cypress_runner.js:102176:11)\n    at Object.throwErr (http://localhost:5354/__cypress/runner/cypress_runner.js:102128:18)\n    at Object.throwErrByPath (http://localhost:5354/__cypress/runner/cypress_runner.js:102163:17)\n    at timedOutWaitingForPageLoad (http://localhost:5354/__cypress/runner/cypress_runner.js:86578:17)\n    at http://localhost:5354/__cypress/runner/cypress_runner.js:87361:16\n    at tryCatcher (http://localhost:5354/__cypress/runner/cypress_runner.js:136088:23)\n    at http://localhost:5354/__cypress/runner/cypress_runner.js:131229:41\n    at tryCatcher (http://localhost:5354/__cypress/runner/cypress_runner.js:136088:23)\n    at Promise._settlePromiseFromHandler (http://localhost:5354/__cypress/runner/cypress_runner.js:134024:31)\n    at Promise._settlePromise (http://localhost:5354/__cypress/runner/cypress_runner.js:134081:18)\n    at Promise._settlePromise0 (http://localhost:5354/__cypress/runner/cypress_runner.js:134126:10)\n    at Promise._settlePromises (http://localhost:5354/__cypress/runner/cypress_runner.js:134201:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:5354/__cypress/runner/cypress_runner.js:130813:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:5354/__cypress/runner/cypress_runner.js:130823:10)\n    at Async.drainQueues (http://localhost:5354/__cypress/runner/cypress_runner.js:130697:14)",
+                "diff": null
+              },
+              "uuid": "b7d3f433-9901-431f-9d6f-2edc8672f800",
+              "parentUUID": "8b2a7f07-2440-4e4a-a0aa-11b0e10a0939",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Error message should display when tying to login without user name and password",
+              "fullTitle": "Admin Site Login Page Test Error message should display when tying to login without user name and password",
+              "timedOut": null,
+              "duration": 25347,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/FoD\\\\FodAdminLogInPageTest.spec.js/Admin Site Login Page Test--Error message should display when tying to login without user name and password(failed).png\"",
+              "code": "adminLoginPage.verifyErrorMessageDisplayedWithoutEnteringUserNameandPassword();",
+              "err": {
+                "message": "CypressError: Timed out retrying: Expected to find element: '#loginEmail', but never found it.",
+                "estack": "CypressError: Timed out retrying: Expected to find element: '#loginEmail', but never found it.\n    at Object.cypressErr (http://localhost:5354/__cypress/runner/cypress_runner.js:102176:11)\n    at Object.throwErr (http://localhost:5354/__cypress/runner/cypress_runner.js:102128:18)\n    at Object.throwErrByPath (http://localhost:5354/__cypress/runner/cypress_runner.js:102163:17)\n    at retry (http://localhost:5354/__cypress/runner/cypress_runner.js:92756:16)\n    at onFailFn (http://localhost:5354/__cypress/runner/cypress_runner.js:80982:16)\n    at tryCatcher (http://localhost:5354/__cypress/runner/cypress_runner.js:136088:23)\n    at Promise._settlePromiseFromHandler (http://localhost:5354/__cypress/runner/cypress_runner.js:134024:31)\n    at Promise._settlePromise (http://localhost:5354/__cypress/runner/cypress_runner.js:134081:18)\n    at Promise._settlePromise0 (http://localhost:5354/__cypress/runner/cypress_runner.js:134126:10)\n    at Promise._settlePromises (http://localhost:5354/__cypress/runner/cypress_runner.js:134201:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:5354/__cypress/runner/cypress_runner.js:130813:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:5354/__cypress/runner/cypress_runner.js:130823:10)\n    at Async.drainQueues (http://localhost:5354/__cypress/runner/cypress_runner.js:130697:14)",
+                "diff": null
+              },
+              "uuid": "3499c0f8-30b2-48a5-b168-a38c5544c8b0",
+              "parentUUID": "8b2a7f07-2440-4e4a-a0aa-11b0e10a0939",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Error message should display when trying to login without password",
+              "fullTitle": "Admin Site Login Page Test Error message should display when trying to login without password",
+              "timedOut": null,
+              "duration": 25339,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/FoD\\\\FodAdminLogInPageTest.spec.js/Admin Site Login Page Test--Error message should display when trying to login without password(failed).png\"",
+              "code": "adminLoginPage.verifyErrorMessageDisplayedWithoutEnteringPassword();",
+              "err": {
+                "message": "CypressError: Timed out retrying: Expected to find element: '#loginEmail', but never found it.",
+                "estack": "CypressError: Timed out retrying: Expected to find element: '#loginEmail', but never found it.\n    at Object.cypressErr (http://localhost:5354/__cypress/runner/cypress_runner.js:102176:11)\n    at Object.throwErr (http://localhost:5354/__cypress/runner/cypress_runner.js:102128:18)\n    at Object.throwErrByPath (http://localhost:5354/__cypress/runner/cypress_runner.js:102163:17)\n    at retry (http://localhost:5354/__cypress/runner/cypress_runner.js:92756:16)\n    at onFailFn (http://localhost:5354/__cypress/runner/cypress_runner.js:80982:16)\n    at tryCatcher (http://localhost:5354/__cypress/runner/cypress_runner.js:136088:23)\n    at Promise._settlePromiseFromHandler (http://localhost:5354/__cypress/runner/cypress_runner.js:134024:31)\n    at Promise._settlePromise (http://localhost:5354/__cypress/runner/cypress_runner.js:134081:18)\n    at Promise._settlePromise0 (http://localhost:5354/__cypress/runner/cypress_runner.js:134126:10)\n    at Promise._settlePromises (http://localhost:5354/__cypress/runner/cypress_runner.js:134201:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:5354/__cypress/runner/cypress_runner.js:130813:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:5354/__cypress/runner/cypress_runner.js:130823:10)\n    at Async.drainQueues (http://localhost:5354/__cypress/runner/cypress_runner.js:130697:14)",
+                "diff": null
+              },
+              "uuid": "1eae870b-bca9-410f-ae94-338c9ef4e2bd",
+              "parentUUID": "8b2a7f07-2440-4e4a-a0aa-11b0e10a0939",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Error message should display when trying to login without username",
+              "fullTitle": "Admin Site Login Page Test Error message should display when trying to login without username",
+              "timedOut": null,
+              "duration": 25333,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/FoD\\\\FodAdminLogInPageTest.spec.js/Admin Site Login Page Test--Error message should display when trying to login without username(failed).png\"",
+              "code": "adminLoginPage.verifyErrorMessageDisplayedWithoutEnteringUsername();",
+              "err": {
+                "message": "CypressError: Timed out retrying: Expected to find element: '#loginEmail', but never found it.",
+                "estack": "CypressError: Timed out retrying: Expected to find element: '#loginEmail', but never found it.\n    at Object.cypressErr (http://localhost:5354/__cypress/runner/cypress_runner.js:102176:11)\n    at Object.throwErr (http://localhost:5354/__cypress/runner/cypress_runner.js:102128:18)\n    at Object.throwErrByPath (http://localhost:5354/__cypress/runner/cypress_runner.js:102163:17)\n    at retry (http://localhost:5354/__cypress/runner/cypress_runner.js:92756:16)\n    at onFailFn (http://localhost:5354/__cypress/runner/cypress_runner.js:80982:16)\n    at tryCatcher (http://localhost:5354/__cypress/runner/cypress_runner.js:136088:23)\n    at Promise._settlePromiseFromHandler (http://localhost:5354/__cypress/runner/cypress_runner.js:134024:31)\n    at Promise._settlePromise (http://localhost:5354/__cypress/runner/cypress_runner.js:134081:18)\n    at Promise._settlePromise0 (http://localhost:5354/__cypress/runner/cypress_runner.js:134126:10)\n    at Promise._settlePromises (http://localhost:5354/__cypress/runner/cypress_runner.js:134201:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:5354/__cypress/runner/cypress_runner.js:130813:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:5354/__cypress/runner/cypress_runner.js:130823:10)\n    at Async.drainQueues (http://localhost:5354/__cypress/runner/cypress_runner.js:130697:14)",
+                "diff": null
+              },
+              "uuid": "bc0c5f8f-999b-444d-a4f3-b0c045366c2e",
+              "parentUUID": "8b2a7f07-2440-4e4a-a0aa-11b0e10a0939",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Error message should display when try to login with invalid username and password",
+              "fullTitle": "Admin Site Login Page Test Error message should display when try to login with invalid username and password",
+              "timedOut": null,
+              "duration": 25334,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/FoD\\\\FodAdminLogInPageTest.spec.js/Admin Site Login Page Test--Error message should display when try to login with invalid username and password(failed).png\"",
+              "code": "adminLoginPage.verifyErrorMessageDisplayedForInvalidUsernameAndPassword();",
+              "err": {
+                "message": "CypressError: Timed out retrying: Expected to find element: '#loginEmail', but never found it.",
+                "estack": "CypressError: Timed out retrying: Expected to find element: '#loginEmail', but never found it.\n    at Object.cypressErr (http://localhost:5354/__cypress/runner/cypress_runner.js:102176:11)\n    at Object.throwErr (http://localhost:5354/__cypress/runner/cypress_runner.js:102128:18)\n    at Object.throwErrByPath (http://localhost:5354/__cypress/runner/cypress_runner.js:102163:17)\n    at retry (http://localhost:5354/__cypress/runner/cypress_runner.js:92756:16)\n    at onFailFn (http://localhost:5354/__cypress/runner/cypress_runner.js:80982:16)\n    at tryCatcher (http://localhost:5354/__cypress/runner/cypress_runner.js:136088:23)\n    at Promise._settlePromiseFromHandler (http://localhost:5354/__cypress/runner/cypress_runner.js:134024:31)\n    at Promise._settlePromise (http://localhost:5354/__cypress/runner/cypress_runner.js:134081:18)\n    at Promise._settlePromise0 (http://localhost:5354/__cypress/runner/cypress_runner.js:134126:10)\n    at Promise._settlePromises (http://localhost:5354/__cypress/runner/cypress_runner.js:134201:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:5354/__cypress/runner/cypress_runner.js:130813:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:5354/__cypress/runner/cypress_runner.js:130823:10)\n    at Async.drainQueues (http://localhost:5354/__cypress/runner/cypress_runner.js:130697:14)",
+                "diff": null
+              },
+              "uuid": "1185d74c-f3a5-42ce-a371-843aa304a053",
+              "parentUUID": "8b2a7f07-2440-4e4a-a0aa-11b0e10a0939",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Admin user can login to the site",
+              "fullTitle": "Admin Site Login Page Test Verify Admin user can login to the site",
+              "timedOut": null,
+              "duration": 25478,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/FoD\\\\FodAdminLogInPageTest.spec.js/Admin Site Login Page Test--Verify Admin user can login to the site(failed).png\"",
+              "code": "adminLoginPage.verifyAdminUserCanLoginToTheSite();",
+              "err": {
+                "message": "CypressError: Timed out after waiting '25000ms' for your remote page to load.\n\nYour page did not fire its 'load' event within '25000ms'.\n\nYou can try increasing the 'pageLoadTimeout' value in 'cypress.json' to wait longer.\n\nBrowsers will not fire the 'load' event until all stylesheets and scripts are done downloading.\n\nWhen this 'load' event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting '25000ms' for your remote page to load.\n\nYour page did not fire its 'load' event within '25000ms'.\n\nYou can try increasing the 'pageLoadTimeout' value in 'cypress.json' to wait longer.\n\nBrowsers will not fire the 'load' event until all stylesheets and scripts are done downloading.\n\nWhen this 'load' event occurs, Cypress will continue running commands.\n    at Object.cypressErr (http://localhost:5354/__cypress/runner/cypress_runner.js:102176:11)\n    at Object.throwErr (http://localhost:5354/__cypress/runner/cypress_runner.js:102128:18)\n    at Object.throwErrByPath (http://localhost:5354/__cypress/runner/cypress_runner.js:102163:17)\n    at timedOutWaitingForPageLoad (http://localhost:5354/__cypress/runner/cypress_runner.js:86578:17)\n    at http://localhost:5354/__cypress/runner/cypress_runner.js:87361:16\n    at tryCatcher (http://localhost:5354/__cypress/runner/cypress_runner.js:136088:23)\n    at http://localhost:5354/__cypress/runner/cypress_runner.js:131229:41\n    at tryCatcher (http://localhost:5354/__cypress/runner/cypress_runner.js:136088:23)\n    at Promise._settlePromiseFromHandler (http://localhost:5354/__cypress/runner/cypress_runner.js:134024:31)\n    at Promise._settlePromise (http://localhost:5354/__cypress/runner/cypress_runner.js:134081:18)\n    at Promise._settlePromise0 (http://localhost:5354/__cypress/runner/cypress_runner.js:134126:10)\n    at Promise._settlePromises (http://localhost:5354/__cypress/runner/cypress_runner.js:134201:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:5354/__cypress/runner/cypress_runner.js:130813:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:5354/__cypress/runner/cypress_runner.js:130823:10)\n    at Async.drainQueues (http://localhost:5354/__cypress/runner/cypress_runner.js:130697:14)",
+                "diff": null
+              },
+              "uuid": "3b7a5ad7-1dbc-4ab3-bc80-bdc9b5852d1f",
+              "parentUUID": "8b2a7f07-2440-4e4a-a0aa-11b0e10a0939",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "b7d3f433-9901-431f-9d6f-2edc8672f800",
+            "3499c0f8-30b2-48a5-b168-a38c5544c8b0",
+            "1eae870b-bca9-410f-ae94-338c9ef4e2bd",
+            "bc0c5f8f-999b-444d-a4f3-b0c045366c2e",
+            "1185d74c-f3a5-42ce-a371-843aa304a053",
+            "3b7a5ad7-1dbc-4ab3-bc80-bdc9b5852d1f"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 152162,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.1.0"
+    }
+  }
+}

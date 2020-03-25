@@ -1,0 +1,12 @@
+{
+  "specName": "ApplicationsPageTestPoc.spec.js",
+  "title": "Verify side navigation tabs displayed and verify mouseover ",
+  "suiteName": "Verify application page",
+  "testName": "Verify application page Verify side navigation tabs displayed and verify mouseover ",
+  "testError": "Timed out retrying: Expected to find element: '#side-nav', but never found it.",
+  "testCommands": [
+    "get #side-nav",
+    "assert expected **#side-nav** to exist in the DOM"
+  ],
+  "screenshot": "verify-side-navigation-tabs-displayed-and-verify-mouseover-failed.png"
+}
