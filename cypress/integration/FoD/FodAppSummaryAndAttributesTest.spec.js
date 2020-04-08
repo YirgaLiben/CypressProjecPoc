@@ -12,6 +12,9 @@ describe('App Summary and Attributes Test', ()=>{
 
     beforeEach(()=>{
         cy.fixture('TenantId.json').as('tenantId')
+        
+
+        
     })
     
     const loginPage = new LogInPage()

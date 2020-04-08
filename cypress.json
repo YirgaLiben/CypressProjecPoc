@@ -1,6 +1,9 @@
 {
   "chromeWebSecurity": false,
   "trashAssetsBeforeRuns": false,
+  "$schema":"https://on.cypress.io/cypress.schema.json",
+  
+  
   "env": {
     "tenant": "AUTO-TAM",
     "admin": "zeusadmin",
@@ -62,5 +65,7 @@
   "video": false,
   "theme": "dark",
   "waitForAnimations": true,
-  "projectId": "wzz83j"
+  "projectId": "wzz83j",
+  "fixturesFolder": "cypress/fixtures"
+  
 }
